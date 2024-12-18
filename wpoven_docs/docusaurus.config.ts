@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'WPOven Documentation',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'WPOven usage documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -20,6 +20,11 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -134,6 +139,11 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+
+
+
 };
+
 
 export default config;
