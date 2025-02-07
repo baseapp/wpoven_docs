@@ -36,14 +36,14 @@ With features like admin page logging, database query logging, log retention set
 
 - Once installed, click **Activate Plugin** to start using it.
 
-### Configure Performance Logs Settings
+## Configure Performance Logs Settings
 
 Once activated, go to **WPOven > Performance Logs** in the WordPress admin menu.
 
 ![Performance Logs Settings](./img/performance-logs/settings.png)
 
 #### Configuration Fields 
-
+<!-- 
 - #### Log Retention 
     - **Enable admin page logging**  
       - Toggle this option to log all admin page activities.
@@ -61,33 +61,51 @@ Once activated, go to **WPOven > Performance Logs** in the WordPress admin menu.
 
 - #### Filter URLs
  
-    - Enter specific URLs to filter logs and review performance-related data.
+    - Enter specific URLs to filter logs and review performance-related data. -->
 
+### Log Retention
 
-- #### Save Settings 
-    - Save any modifications made on this settings page.
+| Field                              | Description                                              |
+|--------------------------------------|----------------------------------------------------------|
+| **Enable admin page logging**        | Toggle this option to log all admin page activities.     |
+| **Enable database queries logging**  | Toggle this option to log all database queries.          |
+| **Log Retention Period**             | Choose how long logs should be stored:  **Unlimited**: Logs are never deleted. **7 days only (Default)**: Logs older than 7 days are automatically removed.                                                                        |
+| **Purge All Logs Button**            | Clicking this button deletes all stored logs immediately.|
+
+### Filter Request
+
+| Field   | Description |
+|---------------|-----------------|
+| **Filter Request** | Enter specific URLs to filter logs and review performance-related data. |
+
 
 ## Features
 
-- **Performance Monitoring & Logging**
-  - Tracks key metrics: PHP execution time, database query execution time, number of queries, CPU load, IP tracking, and memory usage.
+- **Performance Monitoring & Logging:**
+
+  Tracks key metrics: PHP execution time, database query execution time, number of queries, CPU load, IP tracking, and memory usage.
 
 - **Admin Page Activity Logging**
-  - Logs admin page activities to track backend performance.
+
+  Logs admin page activities to track backend performance.
 
 - **Database Query Logging**
-  - Captures and logs all database queries for performance insights.
+
+  Captures and logs all database queries for performance insights.
 
 - **Log Retention Management**
-  - Set retention periods:
+
+  Set retention periods:
     - **Unlimited:** Logs never deleted.
     - **7 Days (Default):** Older logs are automatically removed.
 
 - **Log Purging**
-  - One-click **Purge All Logs** button for instant cleanup.
+
+  One-click **Purge All Logs** button for instant cleanup.
 
 - **URL Filtering for Logs**
-  - Filter logs based on specific URLs for detailed analysis.
+
+  Filter logs based on specific URLs for detailed analysis.
 
 
 

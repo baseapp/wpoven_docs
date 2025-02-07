@@ -38,7 +38,7 @@ With its easy-to-use interface and powerful optimization features, WPOven Image 
 
 - Once installed, click **Activate Plugin** to start using it.
 
-### Configure Plugin Settings
+## Configure Plugin Settings
 
 Once activated, go to **WPOven > Image Optimization** in the WordPress admin menu.
 
@@ -46,7 +46,7 @@ Once activated, go to **WPOven > Image Optimization** in the WordPress admin men
 
 #### Configuration Fields :
 
-- #### Auto-Optimize images on upload
+<!-- - #### Auto-Optimize images on upload
     -  **Toggle: ON/OFF**
         - When enabled, every uploaded image is automatically optimized.
 
@@ -66,15 +66,20 @@ Once activated, go to **WPOven > Image Optimization** in the WordPress admin men
 - #### Image compression label
     - **Dropdown (0-9)**
         - `0` = No compression (higher quality).
-        - `9` = Maximum compression (smaller size, lower quality).
+        - `9` = Maximum compression (smaller size, lower quality). -->
 
-- #### Save Changes
-    - **Button** to save all the selected options.
+| Field               | description  |
+|-----------------------|--------------|
+| **Auto-Optimize images on upload**| When enabled, every uploaded image is automatically optimized.|
+| **Next-Gen format**| **Options:** `WEBP`: Generates WebP versions of images. `OFF`: Disables WebP generation.|
+| **Display images in Next-Gen format on the site** | **Options:** **Use rewrite rules**: Uses server-side rules to serve WebP images. Requires adding `conf/wpoven.conf` to the server and restarting it. **Use `<picture>` tags (Preferred)**: Uses `<picture>` tags instead of `<img>`, ensuring better compatibility.|
+| **Image compression level** | **Dropdown (0-9):** `0` = No compression (higher quality), `9` = Maximum compression (smaller size, lower quality).|
+
 
 ### Bulk Optimization
 ![Bulk Optimization Settings](./img/image-optimization/bulk-optimization.png)
 
-- ### Overview
+ - ### Overview
     - #### Image Optimization Status
         Displays two pie charts:
         - **First Chart:** Original vs. Optimized Size
@@ -86,16 +91,22 @@ Once activated, go to **WPOven > Image Optimization** in the WordPress admin men
             - 🔵 Not Optimized
             - 🔴 Error
 
-- ### Optimize Your Media Files
+<!-- - ### Optimize Your Media Files
     - **Media Library Checkbox**
         - Select to optimize all media library image files.
 
     - **Buttons**
         - 🟦 **Optimize ALL** → Optimizes unoptimized images.
-        - 🟦 **Re-Optimize ALL** → Re-optimizes all images.
+        - 🟦 **Re-Optimize ALL** → Re-optimizes all images.  -->
 
-- ### Save Changes
-    - **Button** to save selected settings.
+- ### Optimize Your Media Files
+
+    | **field**                                | **Description**                                    |
+    |--------------------------------------------|----------------------------------------------------|
+    | **Media Library Checkbox**                 | Select to optimize all media library image files.  |
+    | **Buttons**                                | 🟦 **Optimize ALL** → Optimizes unoptimized images.|
+    |                                            | 🟦 **Re-Optimize ALL** → Re-optimizes all images.  |
+
 
 ## Features
 

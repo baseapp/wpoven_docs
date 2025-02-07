@@ -36,7 +36,7 @@ The plugin provides automatic cache purging, customizable caching rules, and eas
 
 - Once installed, click **Activate Plugin** to start using it.
 
-### Configure Triple Cache Settings
+## Configure Triple Cache Settings
 ### Cloudflare Settings
 Once activated, go to **WPOven > Triple Cache** in the WordPress admin menu.
 
@@ -54,7 +54,7 @@ Once activated, go to **WPOven > Triple Cache** in the WordPress admin menu.
 
 - #### Cloudflare General Settings
 
-  - #### Authentication Mode
+  <!-- - #### Authentication Mode
 
     - **Description:** Select the authentication method used to connect to Cloudflare.
     - **Options:** `API Key` (default).
@@ -71,16 +71,20 @@ Once activated, go to **WPOven > Triple Cache** in the WordPress admin menu.
 
   - #### Cloudflare Domain Name
     - **Description:** Choose the domain for which you want to enable Cloudflare cache.
-    - **Required:** Yes.
+    - **Required:** Yes. -->
 
-- #### Saving Changes
-  Once all fields are filled, click `Save Changes` to apply the configuration.
+| **Field**                 | **Description** |
+|-----------------------------|--------------------------------------------------------------------------------------------|
+| **Authentication Mode**     | Select the authentication method used to connect to Cloudflare.|
+| **Cloudflare Email**        | The email address used to `log in` to Cloudflare.|
+| **Cloudflare API Key**      | The **Global API Key** extracted from your Cloudflare account.|
+| **Cloudflare Domain Name**  | Choose the domain for which you want to enable Cloudflare cache.|
 
 ### Cache Settings
 
 ![Cache Settings](./img/triple-cache/cache-settings.png)
 
-- #### Cloudflare Cache-Control max-age
+<!-- - #### Cloudflare Cache-Control max-age
 
   - Defines the maximum cache duration for Cloudflare.
     - Must be greater than zero.
@@ -138,7 +142,21 @@ Once activated, go to **WPOven > Triple Cache** in the WordPress admin menu.
   - Deletes cached HTML pages only, without affecting other cached assets.
 
 - #### Disable cache purging using queue
-  - Introduces a 10-second delay before purging cache to avoid overwhelming the server with too many requests.
+  - Introduces a 10-second delay before purging cache to avoid overwhelming the server with too many requests. -->
+
+  | **Setting**                                         | **Description** |
+|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| **Cloudflare Cache-Control max-age**               | Defines the maximum cache duration for Cloudflare. **Must be greater than zero.** **Recommended:** 31536000 (1 year). |
+| **Browser Cache-Control max-age**                  | Sets the cache duration for browsers. **Must be greater than zero.** **Recommended:** A value between 60 and 600 seconds. |
+| **Cache Behavior Settings**                        | Allows selecting a specific caching behavior from available options. |
+| **Prevent the following URIs to be cached**        | Lists URIs that should not be cached (supports wildcards `*` ). **Examples:** `/*ao_noptirocket*`, `/*jetpack=comms*`, `/checkout/*` |
+| **Posts per page**                                 | Specifies the number of posts per page for pagination cleanup. **Example:** `10` |
+| **Strip response cookies on cached pages**         | Removes unnecessary response cookies to improve caching (Cloudflare does not cache pages with response cookies). |
+| **Purge single posts cache on comment changes**    | Clears the cache when a comment is added, approved, or deleted. |
+| **Purge cache after WordPress upgrade**            | Automatically clears the cache when the WordPress upgrader process completes. |
+| **Overwrite cache-control header via server rules**| Overrides WordPress’s default cache-control headers using web server rules. |
+| **Purge HTML pages only**                          | Deletes cached HTML pages only, leaving other cached assets intact. |
+| **Disable cache purging using queue**              | Introduces a **10-second delay** before purging cache to prevent overwhelming the server with too many requests. |
 
 After configuring the settings, click `Save Changes` to apply them.
 

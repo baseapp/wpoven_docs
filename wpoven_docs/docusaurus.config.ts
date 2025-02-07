@@ -45,7 +45,12 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: false ,
+        blog: {
+          showReadingTime: true, // Enables reading time on posts
+          path: './blog', // Ensures blogs are stored in /blog directory
+          routeBasePath: 'blog', // Blog posts will be accessible at /blog
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        },
         //{
         //  showReadingTime: true,
           // Please change this to your repo.
@@ -76,7 +81,11 @@ const config: Config = {
         //   position: 'left',
         //   label: 'Tutorial',
         // },
-        // {to: '/blog', label: 'Blog', position: 'left'},
+        // {
+        //   to: '/blog', 
+        //   label: 'Blog', 
+        //   position: 'left'
+        // },
         {
           href: 'https://www.wpoven.com/',
           label: 'WPOven',

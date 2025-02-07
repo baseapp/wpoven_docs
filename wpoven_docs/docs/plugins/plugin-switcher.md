@@ -37,14 +37,14 @@ It helps optimize site performance by enabling granular control over plugin usag
 
 - Once installed, click **Activate Plugin** to start using it.
 
-### Configure Plugin Settings
+## Configure Plugin Settings
 
 Once activated, go to **WPOven > Plugin Switcher** in the WordPress admin menu.
 
 ![Plugin Switcher Settings](./img/plugin-switcher/settings.png)
 
 #### Configuration Fields :
-
+<!-- 
 - **Add Rule Button:**  
   Allows users to create a new rule for plugin activation or deactivation.
 
@@ -77,49 +77,68 @@ Once activated, go to **WPOven > Plugin Switcher** in the WordPress admin menu.
 - **Plugin Status (Activation & Deactivation Buttons):**
 
   - **Activate:** The selected plugins will be enabled for the chosen pages/posts.
-  - **Deactivate:** The selected plugins will be disabled for the chosen pages/posts.
+  - **Deactivate:** The selected plugins will be disabled for the chosen pages/posts. -->
 
-- **Save Changes Button:**  
-  Saves all settings and applies the configured rules.
+| **Field**                         | **Description** |
+|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| **Add Rule Button**                  | Allows users to create a new rule for plugin activation or deactivation.                                                      |
+| **Custom Rule (Title Box)**          | This is the name of the rule. It can be customized for better identification.                                                 |
+| **Name**                             | A text field where users can specify the name of the custom rule.                                                             |
+| **Delete Rule**                      | Clicking this will remove the current rule.                                                                                   |
+| **Status (On/Off Toggle)**           | Indicates whether the rule is active (**On**) or inactive (**Off**).                                                          |
+| **Rule Type (Dropdown Selection)**   | Defines the type of rule:**Page** - Targets specific pages.**Post** - Targets specific posts.**Home Page** - Targets the homepage.**URL** - Targets a custom URL. |
+| **Select Pages (Dropdown Selection)** | Lets users choose the pages where the rule will be applied (multi-selection supported).                                       |
+| **Select Plugins (Dropdown Selection)** | Allows users to select which plugins to activate or deactivate. If no plugins are selected, the rule will have no effect.  |
+| **Plugin Status (Activation & Deactivation Buttons)** | **Activate** - The selected plugins will be enabled for the chosen pages/posts.**Deactivate** - The selected plugins will be disabled for the chosen pages/posts. |
 
-### Usage
+## Usage
 
 - To activate or deactivate plugins on specific pages or posts, follow the instructions in the plugin settings.
 
-### Regular Updates
+## Regular Updates
 
 - Keep the plugin updated for the latest features and security improvements. You can update the plugin through the **Plugins** section in your WordPress admin dashboard.
 
 ## Features
 
 - **Easy Plugin Management**  
+
   Effortlessly activate or deactivate plugins on specific pages, posts, or custom URLs.
 
 - **Customizable Rules**  
+
   Create custom rules for plugin activation based on page/post types or specific URLs.
 
 - **Multi-Page/Multiple Plugin Support**  
+
   Activate or deactivate plugins on multiple pages or posts at once for time-saving flexibility.
 
 - **Homepage Plugin Control**  
+
   Manage plugin activation for your homepage separately for optimized performance.
 
 - **Granular Control over Plugin Activation**  
+
   Activate or deactivate specific plugins for individual pages, posts, or a custom URL, without affecting the entire site.
 
 - **On/Off Toggle for Rules**  
+
   Easily toggle plugin rules on or off for simple management.
 
 - **Rule Type Dropdown**  
+
   Choose whether the rule applies to a page, post, homepage, or custom URL.
 
 - **User-Friendly Interface**  
+
   An intuitive dashboard to manage plugin settings with clear options for rule creation, plugin selection, and status control.
 
 - **Seamless Integration with WordPress**  
+
   Simple installation, activation, and configuration process, with no coding required.
 
 - **Optimized Site Performance**  
+
   Disable unnecessary plugins for specific pages or posts, reducing resource consumption and speeding up site loading times.
 
 ## Frequently Asked Questions

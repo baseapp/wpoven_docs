@@ -25,7 +25,7 @@ This ID is essential for creating and managing your actual custom rules, after c
 
 ![Cloudshield Settings](./img/cloudshield/custom-rule.png)
 
-Follow the steps below to create a custom rule for your domain in Cloudflare:
+<!-- Follow the steps below to create a custom rule for your domain in Cloudflare:
 
 - Log in to your Cloudflare account.
 - Select your **domain** from the dashboard.
@@ -46,11 +46,75 @@ Follow the steps below to create a custom rule for your domain in Cloudflare:
     `Block`,
     `Skip`
 - Click **Deploy** to activate your custom rule.
-- To delete the custom rules, click on the three dots on the right side of the dashboard, and then click the Delete button.
+- To delete the custom rules, click on the three dots on the right side of the dashboard, and then click the Delete button. -->
 
- **Message**: Ensure the dummy custom rule is deleted after deploy to maintain a clean and organized rules list.
+Follow these steps to set up a custom rule for your domain.
 
-### Create Cloudflare API Token
+<details >
+  <summary>Step 1: Access Cloudflare WAF</summary>
+
+1. Log in to your **Cloudflare Account**.
+2. Select your **domain** from the dashboard.
+3. Click on **Security** in the left-hand menu.
+4. Inside the **Security** section, click on **WAF** (Web Application Firewall).
+
+</details>
+
+<details >
+  <summary>Step 2: Create a New Rule</summary>
+
+1. In the **WAF security dashboard**, click on **Custom Rules**.
+2. Click **Create Rule** to start a new rule.
+3. Enter a **descriptive name** for the rule.
+
+</details>
+
+<details >
+  <summary>Step 3: Define Rule Conditions</summary>
+
+| Setting | Description |
+|---------|------------|
+| **Field** | Select `URI`, `URI Full`, or another appropriate field. |
+| **Operator** | Choose from `wildcard`, `equals`, etc. |
+| **Value** | Enter the specific value (e.g., `/example.php`). |
+
+</details>
+
+<details >
+  <summary>Step 4: Choose an Action</summary>
+
+| Action | Description |
+|--------|------------|
+| **Managed Challenge** | Presents an automatic security check. |
+| **JS Challenge** | Requires JavaScript execution to proceed. |
+| **Interactive Challenge** | Presents a CAPTCHA-like test. |
+| **Block** | Blocks access to the matching request. |
+| **Skip** | Skips other security checks for the request. |
+
+</details>
+
+<details >
+  <summary>Step 5: Deploy & Manage Rules</summary>
+
+1. Click **Deploy** to activate the rule.  
+2. To delete a rule:
+   - Click the **three dots** on the right side of the dashboard.  
+   - Select **Delete**.
+
+</details>
+
+---
+
+#### 🔹 Why Use Custom Rules?  
+- Enhances security by blocking unwanted requests.  
+- Helps mitigate attacks like SQL injection and bot traffic.  
+- Provides flexibility to control access based on URLs or conditions.  
+
+:::warning
+ **Ensure the dummy custom rule is deleted after deploy to maintain a clean and organized rules list.**
+:::
+
+<!-- ### Create Cloudflare API Token
 
 ![Cloudshield Settings](./img/cloudshield/api-token.png)
 
@@ -71,9 +135,61 @@ Follow these simple steps to create and use a secure API Token instead of the Gl
   - **Note**: If the token expires, your plugin will be unable to create, update, or delete Cloudflare WAF rules.
 - Click on **Countinue to summary** & then Click **Create Token** and copy the generated token.
 - Enter the API Token and your email address into the form below and click **Save Changes**.
-- Select the **domain** for which you want to enable the WAF settings and click **Save Changes**.
+- Select the **domain** for which you want to enable the WAF settings and click **Save Changes**. -->
 
- **Note**: Using an API Token is more secure and recommended over the Global API Key as it provides fine-grained permissions and an expiration period.
+
+### Create and Use a Secure API Token in Cloudflare
+
+<details >
+  <summary>Step 1: Navigate to API Token Section</summary>
+
+1. Log in to your **Cloudflare Account**.
+2. Click on your profile icon and select **My Profile**.
+3. Scroll down to the **API Tokens** section and click **Create Token**.
+
+</details>
+
+<details >
+  <summary>Step 2: Configure API Token</summary>
+
+- Click **Get Started** under **Create Custom Token**.
+- **Token Name**: Choose a descriptive name.
+
+**Permissions**:
+| Feature | Access Level |
+|---------|-------------|
+| **Zone WAF** | `Edit`, `Read` |
+| **Zone** | `Read` |
+
+**Zone Resources**:
+- Select applicable zones.
+
+**TTL & Expiry**:
+| Setting | Value |
+|---------|-------|
+| **Client IP Address Filtering** | Not required |
+| **TTL (Time to Live)** | Not required |
+| **Start Date** | Today |
+| **End Date** | As needed |
+
+> ⚠️ If the token expires, WAF rules cannot be managed.
+
+</details>
+
+<details >
+  <summary>Step 3: Generate & Use the Token</summary>
+
+1. Click **Continue to Summary** → **Create Token**.  
+2. Copy the **generated token**.  
+3. Enter the API Token and your email into the settings form.  
+4. Select the **domain** and click **Save Changes**.
+
+</details>
+
+
+:::warning
+ **Using an API Token is more secure and recommended over the Global API Key as it provides fine-grained permissions and an expiration period.**
+:::
 ## Installation
 
 ### Download the Plugin
@@ -99,7 +215,7 @@ Once activated, go to **WPOven > Cloudshield** in the WordPress admin menu.
 ![Cloudshield Settings](./img/cloudshield/cloudshield.png)
 ![Cloudshield Settings](./img/cloudshield/cloud-settings.png)
 
-- **Enable Logs**
+<!-- - **Enable Logs**
 
   - **Description:** Allows logging of events and actions.
 
@@ -130,7 +246,16 @@ Once activated, go to **WPOven > Cloudshield** in the WordPress admin menu.
 
 - **Save Changes Button**
   - **Description:** Saves all modified settings.
-  - **Action:** Commits the changes to the system.
+  - **Action:** Commits the changes to the system. -->
+
+    | Setting                  | Description                                               | Options                       | Required |
+  |--------------------------|-----------------------------------------------------------|-------------------------------|----------|
+  | **Enable Logs**           | Allows logging of events and actions.                     | N/A                           | No       |
+  | **Logs Retention**        | Defines how long logs will be retained.                   | 1 day only, 7 days (default), Unlimited | No       |
+  | **Authentication Mode**   | Determines the authentication method used to connect to Cloudflare. | API Token, API Key             | Yes      |
+  | **Cloudflare e-mail**     | The email address associated with the Cloudflare account. | N/A                           | Yes      |
+  | **Cloudflare API Token**  | API token required to authenticate and connect with Cloudflare. | N/A                           | Yes      |
+  | **Save Changes Button**   | Saves all modified settings.         
 
 
 ## Cloudshield Controller
@@ -138,13 +263,12 @@ Once activated, go to **WPOven > Cloudshield** in the WordPress admin menu.
 
 ## WAF Settings
 
-- ### Login Protection Settings
-
-  ![Cloudshield Settings](./img/cloudshield/login.png)
-
+  ### Login Protection Settings
+  
   The **Login Protection** section enhances security by preventing unauthorized access, brute force attacks, and restricting login access based on country.
-
-  - **Enable Cloudflare Captcha**
+  
+  ![Cloudshield Settings](./img/cloudshield/login.png)
+  <!-- - **Enable Cloudflare Captcha**
 
     - **Description:** Enables Cloudflare Captcha to protect your website from bots and ensure only legitimate traffic can access it.
     - **Benefit:** Reduces automated login attempts and enhances security.
@@ -172,15 +296,27 @@ Once activated, go to **WPOven > Cloudshield** in the WordPress admin menu.
 
   - **Allow Country**
     - **Description:** Allows login access only from selected countries.
-    - **Functionality:** The user can choose specific countries from a dropdown list, and login attempts from other locations will be blocked.
+    - **Functionality:** The user can choose specific countries from a dropdown list, and login attempts from other locations will be blocked. -->
 
-- ### DDoS Protection Settings
 
+
+  | Setting                    | Description                                                                 | Required |
+  |----------------------------|-----------------------------------------------------------------------------|----------|
+  | **Enable Cloudflare Captcha** | Enables Cloudflare Captcha to protect your website from bots and ensure only legitimate traffic can access it. | No       |
+  | **Block Cloudflare XMLRPC**  | Blocks Cloudflare XMLRPC to prevent unauthorized access and enhance website security against brute force attacks. | No       |
+  | **Block Wrong Login**        | Blocks wrong login attempts after multiple failed tries to enhance security and prevent brute force attacks. | No       |
+  | **Request Rate**             | Defines the maximum number of incorrect login attempts allowed before blocking further attempts. | No       |
+  | **Enable Country Block**     | Restricts login access, allowing only specified countries.                  | No       |
+  | **Allow Country**            | Allows login access only from selected countries.                           | No       |
+
+
+
+ ### DDoS Protection Settings
+
+    The **DDoS Protection** section provides security settings to prevent denial-of-service attacks and unauthorized access by bots or malicious users.
+  
   ![Cloudshield Settings](./img/cloudshield/ddos.png)
-
-  The **DDoS Protection** section provides security settings to prevent denial-of-service attacks and unauthorized access by bots or malicious users.
-
-  - **Enable Request Rate**
+  <!-- - **Enable Request Rate**
 
     - **Description:** Enables request rate limiting to block IPs that exceed a specified number of requests within a given time period.
     - **Benefit:** Prevents bot abuse, DDoS attacks, and excessive server requests.
@@ -199,16 +335,21 @@ Once activated, go to **WPOven > Cloudshield** in the WordPress admin menu.
   - **Block IP**
 
     - **Description:** Allows users to manually enter and block specific IP addresses.
-    - **Functionality:** If an IP is selected, the system will prevent requests from that IP, improving security.
+    - **Functionality:** If an IP is selected, the system will prevent requests from that IP, improving security. -->
  
+  | Setting                | Description                                                                 | Required |
+  |------------------------|-----------------------------------------------------------------------------|----------|
+  | **Enable Request Rate** | Enables request rate limiting to block IPs that exceed a specified number of requests within a given time period. | No       |
+  | **Request Rate**        | Defines the maximum number of requests allowed per time period. Rate limiting rules control request rates to prevent abuse, DDoS attacks, and server overload. Example Value: `10` (Adjustable via slider or input field). | No       |
+  | **Enable IP Block**     | Restricts access from specific IP addresses.                                | No       |
+  | **Block IP**            | Allows users to manually enter and block specific IP addresses. If an IP is selected, the system will prevent requests from that IP, improving security. | No       |
 
-- ### Crawler Protection Settings
-
-  ![Cloudshield Settings](./img/cloudshield/crawler.png)
-
+ ### Crawler Protection Settings
+  
   The **Crawler Protection** section provides security settings to prevent unwanted bot activity and optimize website performance.
 
-  - **Enable Block NON SEO**
+  ![Cloudshield Settings](./img/cloudshield/crawler.png)
+  <!-- - **Enable Block NON SEO**
 
     - **Description:** Blocks non-search engine bots and scrapers from accessing your site.
     - **Benefit:** Ensures only legitimate traffic is allowed while improving security and SEO performance.
@@ -221,8 +362,13 @@ Once activated, go to **WPOven > Cloudshield** in the WordPress admin menu.
   - **Enable 404 Protection**
 
     - **Description:** Blocks excessive 404 requests.
-    - **Benefit:** Prevents bot activity, reduces server load, and enhances security.
+    - **Benefit:** Prevents bot activity, reduces server load, and enhances security. -->
 
+  | Setting                   | Description                                                                 | Required |
+  |---------------------------|-----------------------------------------------------------------------------|----------|
+  | **Enable Block NON SEO**   | Blocks non-search engine bots and scrapers from accessing your site.       | No       |
+  | **Enable Block AI Crawlers** | Prevents automated bots and crawlers from accessing your site.             | No       |
+  | **Enable 404 Protection**  | Blocks excessive 404 requests.                                              | No       |
 
 ## Features
 
