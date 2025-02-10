@@ -101,13 +101,13 @@ Once activated, go to **WPOven > SMTP Suresend** in the WordPress admin menu.
 | **SMTP Logs**             | When enabled, outgoing emails are logged for debugging.    |
 | **From Email Address**    | The email address used for sending emails. Example: `example@gmail.com` |
 | **From Name**             | The sender's name displayed in outgoing emails. Example: `John Doe` |
-| **Sending Option**        | Select the email sending method:**SMTP** (recommended) - Uses an SMTP server.**PHP** - Uses the default PHP mail function. |
+| **Sending Option**        | Select the email sending method:<br />**SMTP** (recommended) - Uses an SMTP server.<br />**PHP** - Uses the default PHP mail function. |
 | **Host**                  | The SMTP server address. Example: `smtp.example.io` |
 | **Use Authentication**    | Check this box if the SMTP server requires authentication.Most SMTP servers require authentication. |
 | **Username**              | The SMTP username used for authentication.Usually the sender's email address. |
 | **Password**              | The SMTP client password for authentication. |
-| **Type of Encryption**    | Select the security protocol for email transmission:**TLS** (recommended)**SSL** (use if required by your SMTP provider) |
-| **SMTP Port**             | The port number used for SMTP connection:**25 or 587** for TLS.**465** for SSL. |
+| **Type of Encryption**    | Select the security protocol for email transmission:<br />**TLS** (recommended)<br />**SSL** (use if required by your SMTP provider) |
+| **SMTP Port**             | The port number used for SMTP connection:<br />**25 or 587** for TLS.<br />**465** for SSL. |
 
   After configuring the settings, click `Save Changes` to apply them.
 
@@ -154,12 +154,12 @@ Once activated, go to **WPOven > SMTP Suresend** in the WordPress admin menu.
 
 | **field**                 | **Description** |
 |-----------------------------|----------------------------------------------------------------------------------------|
-| **Enable DKIM**             | Toggle **On/Off** to enable or disable DKIM authentication.**On**: Enables DKIM for better email security.**Off**: Disables DKIM. |
-| **Domain Name**             | Enter the domain name for which you want to configure DKIM.Example: `example.com` |
-| **DKIM Selector**           | A **selector** is a unique identifier for the DKIM record.Default value: `"mail"` (can be customized).Example: `selector` |
+| **Enable DKIM**             | Toggle **On/Off** to enable or disable DKIM authentication.<br />**On**: Enables DKIM for better email security.<br />**Off**: Disables DKIM. |
+| **Domain Name**             | Enter the domain name for which you want to configure DKIM.<br />Example: `example.com` |
+| **DKIM Selector**           | A **selector** is a unique identifier for the DKIM record.Default value: `"mail"` (can be customized).<br />Example: `selector` |
 | **DNS Content**             | Generates a **DKIM public key** for your domain.The value should be added to your **DNS TXT record**. |
 | **Click To Copy**           | Click this button to copy the **DNS Content** value for easy pasting into your domain’s DNS settings. |
-| **Instructions for Adding DKIM DNS Record** | After generating **DNS Content**, follow these steps:1. **Record Type:** `TXT`2. **Name:** `mail._domainkey.example.com`3. **Content:** The **DNS Content** generated above.4. **Proxy Status:** DNS only5. **TTL:** Auto |
+| **Instructions for Adding DKIM DNS Record** | After generating **DNS Content**, follow these <br /> steps:<br />1. **Record Type:** `TXT`<br />2. **Name:** `mail._domainkey.example.com`<br />3. **Content:** The **DNS Content** generated above.<br />4. **Proxy Status:** DNS only5. **TTL:** Auto |
 
   After adding this record, your DKIM authentication will be enabled, improving email deliverability and security.
 
@@ -185,8 +185,8 @@ Once activated, go to **WPOven > SMTP Suresend** in the WordPress admin menu.
 | **field**            | **Description** |
 |------------------------|-------------------------------------------------------------|
 | **Send a Test Email**  | The SMTP Mail Test feature allows you to verify your SMTP configuration by sending a test email. |
-| **To (Recipient Email)** | Enter the email address where the test email should be sent.Example: `example@gmail.com` |
-| **HTML Format**        | Toggle **On/Off** to enable or disable HTML formatting.**On**: Sends the email in HTML format.**Off**: Sends the email in plain text. |
+| **To (Recipient Email)** | Enter the email address where the test email should be sent.<br />Example: `example@gmail.com` |
+| **HTML Format**        | Toggle **On/Off** to enable or disable HTML formatting.<br />**On**: Sends the email in HTML format.<br />**Off**: Sends the email in plain text. |
 
 ## Features
 

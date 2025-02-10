@@ -86,10 +86,10 @@ Once activated, go to **WPOven > Plugin Switcher** in the WordPress admin menu.
 | **Name**                             | A text field where users can specify the name of the custom rule.                                                             |
 | **Delete Rule**                      | Clicking this will remove the current rule.                                                                                   |
 | **Status (On/Off Toggle)**           | Indicates whether the rule is active (**On**) or inactive (**Off**).                                                          |
-| **Rule Type (Dropdown Selection)**   | Defines the type of rule:**Page** - Targets specific pages.**Post** - Targets specific posts.**Home Page** - Targets the homepage.**URL** - Targets a custom URL. |
+| **Rule Type (Dropdown Selection)**   | Defines the type of rule:<br />**Page** - Targets specific pages.<br />**Post** - Targets specific posts.<br />**Home Page** - Targets the homepage.<br />**URL** - Targets a custom URL. |
 | **Select Pages (Dropdown Selection)** | Lets users choose the pages where the rule will be applied (multi-selection supported).                                       |
 | **Select Plugins (Dropdown Selection)** | Allows users to select which plugins to activate or deactivate. If no plugins are selected, the rule will have no effect.  |
-| **Plugin Status (Activation & Deactivation Buttons)** | **Activate** - The selected plugins will be enabled for the chosen pages/posts.**Deactivate** - The selected plugins will be disabled for the chosen pages/posts. |
+| **Plugin Status (Activation & Deactivation Buttons)** | **Activate** - The selected plugins will be enabled for the chosen pages/posts.<br />**Deactivate** - The selected plugins will be disabled for the chosen pages/posts. |
 
 ## Usage
 

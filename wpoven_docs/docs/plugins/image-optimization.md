@@ -71,9 +71,9 @@ Once activated, go to **WPOven > Image Optimization** in the WordPress admin men
 | Field               | description  |
 |-----------------------|--------------|
 | **Auto-Optimize images on upload**| When enabled, every uploaded image is automatically optimized.|
-| **Next-Gen format**| **Options:** `WEBP`: Generates WebP versions of images. `OFF`: Disables WebP generation.|
-| **Display images in Next-Gen format on the site** | **Options:** **Use rewrite rules**: Uses server-side rules to serve WebP images. Requires adding `conf/wpoven.conf` to the server and restarting it. **Use `<picture>` tags (Preferred)**: Uses `<picture>` tags instead of `<img>`, ensuring better compatibility.|
-| **Image compression level** | **Dropdown (0-9):** `0` = No compression (higher quality), `9` = Maximum compression (smaller size, lower quality).|
+| **Next-Gen format**| **Options:** <br />`WEBP`: Generates WebP versions of images.<br /> `OFF`: Disables WebP generation.|
+| **Display images in Next-Gen format on the site** | **Options:**<br /> **Use rewrite rules**: Uses server-side rules to serve WebP images. Requires adding `conf/wpoven.conf` to the server and restarting it.<br /> **Use `<picture>` tags (Preferred)**: Uses `<picture>` tags instead of `<img>`, ensuring better compatibility.|
+| **Image compression level** | **Dropdown (0-9):**<br /> `0` = No compression (higher quality),<br /> `9` = Maximum compression (smaller size, lower quality).|
 
 
 ### Bulk Optimization
@@ -104,8 +104,7 @@ Once activated, go to **WPOven > Image Optimization** in the WordPress admin men
     | **field**                                | **Description**                                    |
     |--------------------------------------------|----------------------------------------------------|
     | **Media Library Checkbox**                 | Select to optimize all media library image files.  |
-    | **Buttons**                                | 🟦 **Optimize ALL** → Optimizes unoptimized images.|
-    |                                            | 🟦 **Re-Optimize ALL** → Re-optimizes all images.  |
+    | **Buttons**                                | 🟦 **Optimize ALL** → Optimizes unoptimized images.<br />🟦 **Re-Optimize ALL** → Re-optimizes all images.|
 
 
 ## Features

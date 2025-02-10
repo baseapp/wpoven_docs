@@ -146,11 +146,11 @@ Once activated, go to **WPOven > Triple Cache** in the WordPress admin menu.
 
   | **Setting**                                         | **Description** |
 |-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| **Cloudflare Cache-Control max-age**               | Defines the maximum cache duration for Cloudflare. **Must be greater than zero.** **Recommended:** 31536000 (1 year). |
-| **Browser Cache-Control max-age**                  | Sets the cache duration for browsers. **Must be greater than zero.** **Recommended:** A value between 60 and 600 seconds. |
+| **Cloudflare Cache-Control max-age**               | Defines the maximum cache duration for Cloudflare. **Must be greater than zero.** <br /> **Recommended:** 31536000 (1 year). |
+| **Browser Cache-Control max-age**                  | Sets the cache duration for browsers.<br /> **Must be greater than zero.** <br />**Recommended:** A value between 60 and 600 seconds. |
 | **Cache Behavior Settings**                        | Allows selecting a specific caching behavior from available options. |
-| **Prevent the following URIs to be cached**        | Lists URIs that should not be cached (supports wildcards `*` ). **Examples:** `/*ao_noptirocket*`, `/*jetpack=comms*`, `/checkout/*` |
-| **Posts per page**                                 | Specifies the number of posts per page for pagination cleanup. **Example:** `10` |
+| **Prevent the following URIs to be cached**        | Lists URIs that should not be cached (supports wildcards `*` ). <br />**Examples:** `/*ao_noptirocket*`, `/*jetpack=comms*`, `/checkout/*` |
+| **Posts per page**                                 | Specifies the number of posts per page for pagination cleanup.<br /> **Example:** `10` |
 | **Strip response cookies on cached pages**         | Removes unnecessary response cookies to improve caching (Cloudflare does not cache pages with response cookies). |
 | **Purge single posts cache on comment changes**    | Clears the cache when a comment is added, approved, or deleted. |
 | **Purge cache after WordPress upgrade**            | Automatically clears the cache when the WordPress upgrader process completes. |
@@ -198,7 +198,7 @@ After configuring the settings, click `Save Changes` to apply them.
 
 - #### Can I restore all Cloudflare settings as before the plugin activation?
 
-  Yes, there is a `Reset All` button after enable caching.
+  Yes, there is a ` Reset All ` button after enable caching.
 
 - #### Do you automatically clean up the cache on website changes?
 
