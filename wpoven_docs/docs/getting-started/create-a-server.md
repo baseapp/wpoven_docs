@@ -35,7 +35,7 @@ Once the process begins, you can monitor the setup progress in the **Servers** s
 ## What Next?
 After your server is active, you can proceed to:
 
-- [Create and Deploy a WordPress Site](./create-wordpress-site)
-- [Manage Server Settings](./server-management)
+<!-- - [Create and Deploy a WordPress Site](./create-wordpress-site)
+- [Manage Server Settings](./server-management) -->
 
-If you encounter any issues, feel free to reach out to [WPOven Support](./support) for assistance.
+<!-- If you encounter any issues, feel free to reach out to [WPOven Support](./support) for assistance. -->
