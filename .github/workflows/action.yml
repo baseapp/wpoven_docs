@@ -1,0 +1,29 @@
+name: Deploy WPOven Plugin Docs via SFTP
+
+on:
+  push:
+    branches:
+      - main  # Change as needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies & Build
+        run: |
+          cd wpoven_docs
+          npm install
+          npm run build
+
+      - name: Deploy via SFTP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
+          source: "wpoven_docs/build/*"
+          target: "/public_html/docs_html"
+
