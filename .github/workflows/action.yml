@@ -29,6 +29,7 @@ jobs:
         with:
           server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
+          sftp_only: true
           password: ${{ secrets.SFTP_PASS }}
           local_path: "wpoven_docs/build/*"
           remote_path: "/public_html/docs_html"
