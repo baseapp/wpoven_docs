@@ -25,11 +25,11 @@ jobs:
           npm run build
 
       - name: Deploy via SFTP
-        uses: appleboy/scp-action@master
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          host: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASS }}
-          source: "wpoven_docs/build/*"
-          target: "/public_html/docs_html"
+          ftp-server: ${{ secrets.SFTP_HOST }}
+          ftp-username: ${{ secrets.SFTP_USER }}
+          ftp-password: ${{ secrets.SFTP_PASS }}
+          ftp-password: "wpoven_docs/build/"
+          server-dir: "/public_html/docs_html"
 
