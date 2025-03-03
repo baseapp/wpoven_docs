@@ -30,6 +30,6 @@ jobs:
           host: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
-          source: "wpoven_docs/build/*"
+          source: "wpoven_docs/build/"
           target: "/public_html/docs_html"
 
