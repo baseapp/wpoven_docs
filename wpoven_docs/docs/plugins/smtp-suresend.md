@@ -44,59 +44,7 @@ Once activated, go to **WPOven > SMTP Suresend** in the WordPress admin menu.
 
 ![SMTP Suresend Settings](./img/smtp-suresend/smtp-settings.png)
 
-<!-- 
-- **SMTP Logs**
-
-  - When enabled, outgoing emails are logged for debugging.
-
-- **From Email Address**
-
-  - The email address used for sending emails.
-    - Example: `example@gmail.com`
-
-- **From Name**
-
-  - The sender's name displayed in outgoing emails.
-    - Example: `John Doe`
-
-- **Sending Option**
-
-  - Select the email sending method:
-    - **SMTP** (recommended) - Uses an SMTP server.
-    - **PHP** - Uses the default PHP mail function.
-
-- **Host**
-
-  - The SMTP server address.
-    - Example: `smtp.example.io`
-
-- **Use Authentication**
-
-  - Check this box if the SMTP server requires authentication.
-  - Most SMTP servers require authentication.
-
-- **Username**
-
-  - The SMTP username used for authentication.
-  - Usually the sender's email address.
-
-- **Password**
-
-  - The SMTP client password for authentication.
-
-- **Type of Encryption**
-
-  - Select the security protocol for email transmission:
-    - **TLS** (recommended)
-    - **SSL** (use if required by your SMTP provider)
-
-- **SMTP Port**
-
-  - The port number used for SMTP connection:
-    - **25 or 587** for TLS.
-    - **465** for SSL. -->
-
-    | **field**               | **Description** |
+| **field**               | **Description** |
 |---------------------------|-------------------------------------------------------------|
 | **SMTP Logs**             | When enabled, outgoing emails are logged for debugging.    |
 | **From Email Address**    | The email address used for sending emails. Example: `example@gmail.com` |
@@ -116,42 +64,6 @@ Once activated, go to **WPOven > SMTP Suresend** in the WordPress admin menu.
 
 ![DKIM Settings](./img/smtp-suresend/dkim.png)
 
-<!-- - **Enable DKIM**
-
-  - Toggle **On/Off** to enable or disable DKIM authentication.
-    - **On**: Enables DKIM for better email security and authentication.
-    - **Off**: Disables DKIM.
-
-- **Domain Name**
-
-  - Enter the domain name for which you want to configure DKIM.
-    - Example: `example.com`
-
-- **DKIM Selector**
-
-  - A **selector** is a unique identifier for the DKIM record.
-  - The default value is **"mail"**, but you can set a custom value.
-    - Example: `selector`
-
-- **DNS Content**
-
-  - This field generates a DKIM public key for your domain.
-  - The generated value should be added to your **DNS TXT record**.
-
-- **Click To Copy**
-
-  - Click this button to copy the **DNS Content** value.
-  - This makes it easier to paste into your domain’s DNS settings.
-
-- **Instructions for Adding DKIM DNS Record**
-  - Once you generate the **DNS Content**, follow these steps:
-
-    1. **Record Type:** `TXT`
-    2. **Name:** `mail._domainkey.example.com`
-    3. **Content:** The **DNS Content** generated above.
-    4. **Proxy Status:** DNS only
-    5. **TTL:** Auto -->
-
 | **field**                 | **Description** |
 |-----------------------------|----------------------------------------------------------------------------------------|
 | **Enable DKIM**             | Toggle **On/Off** to enable or disable DKIM authentication.<br />**On**: Enables DKIM for better email security.<br />**Off**: Disables DKIM. |
@@ -166,21 +78,6 @@ Once activated, go to **WPOven > SMTP Suresend** in the WordPress admin menu.
 ### SMTP Mail Test
 
 ![SMTP Mail Test](./img/smtp-suresend/mail-test.png)
-
-<!-- - **Send a Test Email**
-
-  - The SMTP Mail Test feature allows you to verify your SMTP configuration by sending a test email.
-
-- **To (Recipient Email)**
-
-  - Enter the email address where the test email should be sent.
-    - Example: `example@gmail.com`
-
-- **HTML Format**
-
-  - Toggle **On/Off** to enable or disable HTML formatting.
-    - **On**: Sends the email in HTML format.
-    - **Off**: Sends the email in plain text. -->
 
 | **field**            | **Description** |
 |------------------------|-------------------------------------------------------------|

@@ -3,6 +3,10 @@ sidebar_position: 1
 slug: '/'
 ---
 
+import PrivacyPolicy from '/src/components/HomepageFeatures/privacyPolicy.js';
+
+<PrivacyPolicy />
+
 # Introduction
 
 Welcome to the comprehensive guide for WPOven Managed Hosting. Whether you are a blogger, business owner, or developer, this documentation is designed to assist you in getting the most out of your hosting experience. WPOven Managed Hosting offers a robust and scalable solution tailored for WordPress websites, ensuring enhanced performance, security, and support.

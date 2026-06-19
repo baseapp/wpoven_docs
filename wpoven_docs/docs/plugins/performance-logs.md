@@ -43,25 +43,6 @@ Once activated, go to **WPOven > Performance Logs** in the WordPress admin menu.
 ![Performance Logs Settings](./img/performance-logs/settings.png)
 
 #### Configuration Fields 
-<!-- 
-- #### Log Retention 
-    - **Enable admin page logging**  
-      - Toggle this option to log all admin page activities.
-  
-    - **Enable database queries logging**  
-      - Toggle this option to log all database queries.
-
-    - **Log Retention Period**
-      - Choose how long logs should be stored :
-        - **Unlimited**: Logs are never deleted.
-        - **7 days only (Default)**: Logs older than 7 days are automatically removed.
-
-    - **Purge All Logs Button**  
-      - Clicking this button deletes all stored logs immediately.
-
-- #### Filter URLs
- 
-    - Enter specific URLs to filter logs and review performance-related data. -->
 
 ### Log Retention
 

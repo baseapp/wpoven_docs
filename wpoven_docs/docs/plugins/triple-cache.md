@@ -54,25 +54,6 @@ Once activated, go to **WPOven > Triple Cache** in the WordPress admin menu.
 
 - #### Cloudflare General Settings
 
-  <!-- - #### Authentication Mode
-
-    - **Description:** Select the authentication method used to connect to Cloudflare.
-    - **Options:** `API Key` (default).
-
-  - #### Cloudflare e-mail
-
-    - **Description:** The email address used to log in to Cloudflare.
-    - **Required:** Yes.
-
-  - #### Cloudflare API Key
-
-    - **Description:** The **Global API Key** extracted from your Cloudflare account.
-    - **Required:** Yes.
-
-  - #### Cloudflare Domain Name
-    - **Description:** Choose the domain for which you want to enable Cloudflare cache.
-    - **Required:** Yes. -->
-
 | **Field**                 | **Description** |
 |-----------------------------|--------------------------------------------------------------------------------------------|
 | **Authentication Mode**     | Select the authentication method used to connect to Cloudflare.|
@@ -84,67 +65,7 @@ Once activated, go to **WPOven > Triple Cache** in the WordPress admin menu.
 
 ![Cache Settings](./img/triple-cache/cache-settings.png)
 
-<!-- - #### Cloudflare Cache-Control max-age
-
-  - Defines the maximum cache duration for Cloudflare.
-    - Must be greater than zero.
-    - Recommended: 31536000 (1 year).
-
-- #### Browser Cache-Control max-age
-
-  - Sets the cache duration for browsers.
-    - Must be greater than zero.
-    - Recommended: A value between 60 and 600 seconds.
-
-- #### Cache Behavior Settings
-
-  - Allows selecting a specific caching behavior.
-    - Choose from available options.
-
-- #### Prevent the following URIs to be cached
-
-  - Lists the URIs that should not be cached. Supports wildcards (\*). - Example: - 
-    - `/*ao_noptirocket*`
-    - `/*jetpack=comms*`
-    - `/*kinsta-monitor*`
-    - `*ao_speedup_cachebuster*`
-    - `/*removed_item*`
-    - `/my-account*`
-    - `/wc-api/*`
-    - `/edd-api/*`
-    - `/wp-json*`
-    - `/checkout/*`
-    - `/cart/*`
-
-- #### Posts per page
-
-  - Specifies the number of posts per page in themes for pagination cleanup.
-    - Example: 10
-
-- #### Strip response cookies on pages that should be cached
-
-  - Cloudflare does not cache when response cookies exist. This option removes unnecessary response cookies to improve caching.
-
-- #### Purge single posts cache on comment changes
-
-  - Automatically clears the cache when a comment is added, approved, or deleted.
-
-- #### Automatically purge the cache when the upgrader process is complete
-
-  - Ensures that the cache is cleared once the WordPress update process completes.
-
-- #### Overwrite the cache-control header for WordPress pages using web server rules
-
-  - Overrides WordPress's default cache-control headers with server-level rules.
-
-- #### Purge HTML pages only
-
-  - Deletes cached HTML pages only, without affecting other cached assets.
-
-- #### Disable cache purging using queue
-  - Introduces a 10-second delay before purging cache to avoid overwhelming the server with too many requests. -->
-
-  | **Setting**                                         | **Description** |
+| **Setting**                                         | **Description** |
 |-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | **Cloudflare Cache-Control max-age**               | Defines the maximum cache duration for Cloudflare. **Must be greater than zero.** <br /> **Recommended:** 31536000 (1 year). |
 | **Browser Cache-Control max-age**                  | Sets the cache duration for browsers.<br /> **Must be greater than zero.** <br />**Recommended:** A value between 60 and 600 seconds. |

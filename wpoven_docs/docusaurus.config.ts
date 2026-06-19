@@ -2,10 +2,12 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+
 const config: Config = {
+
   title: 'WPOven Documentation',
   tagline: 'WPOven usage documentation',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://www.wpoven.com/',
@@ -43,13 +45,13 @@ const config: Config = {
           sidebarPath: './sidebars.ts',          
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/baseapp/wpoven_docs/tree/main/wpoven_docs/',
         },
         blog: {
           showReadingTime: true, // Enables reading time on posts
           path: './blog', // Ensures blogs are stored in /blog directory
           routeBasePath: 'blog', // Blog posts will be accessible at /blog
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/baseapp/wpoven_docs/tree/main/wpoven_docs/',
         },
         //{
         //  showReadingTime: true,
@@ -69,10 +71,10 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'WPOven Docs',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         // {
@@ -148,9 +150,6 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
-
-
-
 
 };
 
