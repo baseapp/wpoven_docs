@@ -3,7 +3,7 @@
 sidebar_position: 5
 title: "Zoho Mail SMTP Setup"
 sidebar_label: "Zoho Mail SMTP"
-description: "Create a Zoho Business Email account, configure Cloudflare DNS records, and connect WordPress using Zoho Mail Plugin or SMTP."
+description: "Set up Zoho Mail, configure DNS records, and connect WordPress for email delivery."
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Introduction
@@ -33,7 +33,7 @@ Before proceeding, ensure you have:
 
 | Requirement        | Description                    |
 | ------------------ | ------------------------------ |
-| Domain Name        | Example: `devscript.cloud`     |
+| Domain Name        | Example: `yourdomain.com`     |
 | Cloudflare Account | DNS managed through Cloudflare |
 | WordPress Website  | Installed and accessible       |
 | Zoho Account       | Free or paid Zoho Mail account |
@@ -53,7 +53,7 @@ Before proceeding, ensure you have:
 Example:
 
 ```text
-devscript.cloud
+yourdomain.com
 ```
 
 6. Continue to domain verification.
@@ -175,9 +175,9 @@ Users → Add User
 Examples:
 
 ```text
-admin@devscript.cloud
-support@devscript.cloud
-contact@devscript.cloud
+admin@yourdomain.com
+support@yourdomain.com
+contact@yourdomain.com
 ```
 
 4. Set a secure password.
@@ -190,7 +190,7 @@ Use the following SMTP settings for applications and websites.
 
 ## SMTP Server
 
-### Zoho India
+### Zoho 
 
 | Setting   | Value        |
 | --------- | ------------ |
