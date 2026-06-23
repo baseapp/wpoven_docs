@@ -1,8 +1,0 @@
-{
-  "label": "Email Configuration",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Learn how to set up and configure email services for your applications, ensuring reliable communication and notifications."
-  }
-}

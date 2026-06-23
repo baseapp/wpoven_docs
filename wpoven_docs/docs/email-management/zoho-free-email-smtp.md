@@ -1,14 +1,16 @@
 ---
 
-sidebar_position: 5
-title: "Zoho Mail SMTP Setup"
-sidebar_label: "Zoho Mail SMTP"
+sidebar_position: 1
+title: "Zoho Free Email/SMTP "
+sidebar_label: "Zoho Free Email/SMTP"
 description: "Set up Zoho Mail, configure DNS records, and connect WordPress for email delivery."
 --------------------------------------------------------------------------------------------------------------------------------------------
 
+---
+
 ## Introduction
 
-Zoho Mail provides professional business email hosting for custom domains. By connecting your domain with Zoho Mail, you can create email addresses such as:
+Zoho Mail provides professional business free email hosting for custom domains. By connecting your domain with Zoho Mail, you can create email addresses such as:
 
 ```text
 admin@yourdomain.com
@@ -18,14 +20,12 @@ contact@yourdomain.com
 
 This guide covers:
 
-* Creating a Zoho Business Email account
+* Creating a free Zoho Business Email account 
 * Verifying your domain
 * Configuring Cloudflare DNS records
 * Creating email accounts
 * Connecting WordPress using Zoho Mail Plugin
 * Connecting WordPress using SMTP
-
----
 
 ## Prerequisites
 
@@ -40,9 +40,9 @@ Before proceeding, ensure you have:
 
 ---
 
-# Create a Zoho Business Email Account
+## Create a free Zoho Business Email Account
 
-## Step 1: Sign Up for Zoho Mail
+### Step 1: Sign Up for Zoho Mail
 
 1. Visit Zoho Mail.
 2. Select **Business Email**.
@@ -50,17 +50,17 @@ Before proceeding, ensure you have:
 4. Click **Add Existing Domain**.
 5. Enter your domain name.
 
-Example:
+    Example:
 
-```text
-yourdomain.com
-```
+    ```text
+    yourdomain.com
+    ```
 
 6. Continue to domain verification.
 
 ---
 
-## Step 2: Verify Domain Ownership
+### Step 2: Verify Domain Ownership
 
 Zoho will provide a TXT record.
 
@@ -70,15 +70,15 @@ Example:
 | ---- | ---- | ---------------------------- |
 | TXT  | @    | zoho-verification=zbxxxxxxxx |
 
-### Add Record in Cloudflare
+#### Add Record in Cloudflare
 
 1. Open Cloudflare Dashboard.
 2. Select your domain.
 3. Navigate to:
 
-```text
-DNS → Records
-```
+    ```text
+    DNS → Records
+    ```
 
 4. Click **Add Record**.
 5. Add the TXT record provided by Zoho.
@@ -94,13 +94,13 @@ After domain verification, Zoho will request MX, SPF, and DKIM records.
 
 ---
 
-## Step 3: Add MX Records
+### Step 3: Add MX Records
 
 MX records tell the internet where to deliver your emails.
 
 Add the following records in Cloudflare.
 
-### Zoho India Data Center
+#### Zoho India Data Center
 
 | Type | Name | Mail Server | Priority |
 | ---- | ---- | ----------- | -------- |
@@ -108,7 +108,7 @@ Add the following records in Cloudflare.
 | MX   | @    | mx2.zoho.in | 20       |
 | MX   | @    | mx3.zoho.in | 50       |
 
-### Important
+#### Important
 
 * Remove any old MX records.
 * Keep only Zoho MX records.
@@ -116,7 +116,7 @@ Add the following records in Cloudflare.
 
 ---
 
-## Step 4: Add SPF Record
+### Step 4: Add SPF Record
 
 SPF authorizes Zoho to send emails on behalf of your domain.
 
@@ -128,7 +128,7 @@ Add:
 
 ---
 
-## Step 5: Add DKIM Record
+### Step 5: Add DKIM Record
 
 DKIM improves email authentication and deliverability.
 
@@ -147,7 +147,7 @@ After adding the record:
 
 ---
 
-## Step 6: Add DMARC Record (Recommended)
+### Step 6: Add DMARC Record (Recommended)
 
 DMARC protects your domain against spoofing.
 
@@ -159,38 +159,38 @@ Add:
 
 ---
 
-# Create Email Accounts
+## Create Email Accounts
 
 After MX verification succeeds:
 
 1. Open Zoho Admin Console.
 2. Navigate to:
 
-```text
-Users → Add User
-```
+    ```text
+    Users → Add User
+    ```
 
 3. Create your mailbox.
 
-Examples:
+    Examples:
 
-```text
-admin@yourdomain.com
-support@yourdomain.com
-contact@yourdomain.com
-```
+    ```text
+    admin@yourdomain.com
+    support@yourdomain.com
+    contact@yourdomain.com
+    ```
 
 4. Set a secure password.
 
 ---
 
-# Zoho SMTP Details
+## Zoho SMTP Settings
 
 Use the following SMTP settings for applications and websites.
 
-## SMTP Server
+### SMTP Server
 
-### Zoho 
+#### Zoho 
 
 | Setting   | Value        |
 | --------- | ------------ |
@@ -198,7 +198,7 @@ Use the following SMTP settings for applications and websites.
 | TLS Port  | 587          |
 | SSL Port  | 465          |
 
-### Authentication
+#### Authentication
 
 | Setting  | Value                                               |
 | -------- | --------------------------------------------------- |
@@ -207,30 +207,30 @@ Use the following SMTP settings for applications and websites.
 
 ---
 
-# Method 1: Zoho Mail Plugin
+### Method 1: Zoho Mail Plugin
 
-## Install Plugin
+#### Install Plugin
 
 1. Login to WordPress Admin.
 2. Navigate to:
 
-```text
-Plugins → Add New
-```
+    ```text
+    Plugins → Add New
+    ```
 
 3. Search:
 
-```text
-Zoho Mail
-```
+    ```text
+    Zoho Mail
+    ```
 
 4. Install and activate the plugin.
 
 ---
 
-## Create OAuth Credentials
+#### Create OAuth Credentials
 
-### Open Zoho API Console
+##### Open Zoho API Console
 
 Navigate to:
 
@@ -238,39 +238,39 @@ Navigate to:
 https://api-console.zoho.com/
 ```
 
-### Create Client
+##### Create Client
 
 1. Click **Add Client**.
 2. Select:
 
-```text
-Server-based Application
-```
+    ```text
+    Server-based Application
+    ```
 
 3. Enter:
 
-```text
-Client Name:
-My WordPress Site
+    ```text
+    Client Name:
+    My WordPress Site
 
-Homepage URL:
-https://yourdomain.com
-```
+    Homepage URL:
+    https://yourdomain.com
+    ```
 
 4. Copy Redirect URI from the Zoho Mail plugin settings page.
 5. Paste into Authorized Redirect URI.
 6. Click Create.
 
-Zoho will generate:
+    Zoho will generate:
 
-```text
-Client ID
-Client Secret
-```
+    ```text
+    Client ID
+    Client Secret
+    ```
 
 ---
 
-## Configure Plugin
+#### Configure Plugin
 
 Navigate to:
 
@@ -298,7 +298,7 @@ Approve access.
 
 ---
 
-## Test Email
+#### Test Email
 
 Navigate to:
 
@@ -310,16 +310,16 @@ Send a test email.
 
 ---
 
-# Method 2: WPOven SMTP Suresend
+### Method 2: WPOven SMTP Suresend
 
-## Install Plugin
+#### Install Plugin
 
 1. Download WPOven SMTP Suresend,  [Click for Download](https://github.com/baseapp/wpoven_suresend/releases).
 2. Navigate to:
 
-```text
-Plugins → Add New → Upload Plugin
-```
+    ```text
+    Plugins → Add New → Upload Plugin
+    ```
 
 3. Upload ZIP file.
 4. Click Install.
@@ -327,7 +327,7 @@ Plugins → Add New → Upload Plugin
 
 ---
 
-## Configure SMTP
+#### Configure SMTP
 
 Navigate to:
 
@@ -366,7 +366,7 @@ Save Changes
 
 ---
 
-## SMTP Mail Test
+#### SMTP Mail Test
 
 Navigate to:
 
@@ -391,9 +391,9 @@ If successful, SMTP configuration is complete.
 
 ---
 
-# Troubleshooting
+## Troubleshooting
 
-## MX Verification Failure
+### MX Verification Failure
 
 Check:
 
@@ -404,7 +404,7 @@ Check:
 
 ---
 
-## DKIM Verification Failure
+### DKIM Verification Failure
 
 Check:
 
@@ -415,7 +415,7 @@ Check:
 
 ---
 
-## SMTP Authentication Failed
+### SMTP Authentication Failed
 
 Verify:
 
@@ -425,7 +425,7 @@ Verify:
 
 ---
 
-## Emails Going to Spam
+### Emails Going to Spam
 
 Verify:
 
