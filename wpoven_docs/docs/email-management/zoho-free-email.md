@@ -1,11 +1,8 @@
 ---
-
-sidebar_position: 1
+sidebar_position: 4
 title: "Zoho Free Email/SMTP "
 sidebar_label: "Zoho Free Email/SMTP"
 description: "Set up Zoho Mail, configure DNS records, and connect WordPress for email delivery."
---------------------------------------------------------------------------------------------------------------------------------------------
-
 ---
 
 ## Introduction

@@ -60,4 +60,5 @@ After creating your site, you can:
 - [Install and Manage Themes ](https://wordpress.org/documentation/article/work-with-themes/)
 - [Install and Manage Plugins ](https://wordpress.org/documentation/article/manage-plugins/)
 
-If you encounter any issues, check out our [Troubleshooting Guide](./common-issues) or contact [WPOven Support](https://app.wpoven.com/support).
+<!-- If you encounter any issues, check out our [Troubleshooting Guide](./common-issues) or contact [WPOven Support](https://app.wpoven.com/support). -->
+If you encounter any issues, contact [WPOven Support](https://app.wpoven.com/support).

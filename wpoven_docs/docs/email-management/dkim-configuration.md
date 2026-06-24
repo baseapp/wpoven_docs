@@ -1,7 +1,7 @@
 ---
-title: Enable DKIM for Domain
+title: DKIM Configuration
 description: Configure DKIM authentication to verify domain emails, improve deliverability, and prevent email spoofing.
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # DKIM Configuration

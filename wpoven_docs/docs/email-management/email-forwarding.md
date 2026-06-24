@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+title: Email Forwarding
+description: Configure email forwarding for your domain and route incoming emails to another mailbox using Cloudflare Email Routing or WPOven's built-in forwarding service.
+---
+
 ## Email Forwarding
 
 ### Introduction

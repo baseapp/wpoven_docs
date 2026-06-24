@@ -1,9 +1,22 @@
+---
+sidebar_position: 3
+title: "WPOven Free Email "
+description: "Get started with WPOven Free Email and create professional business email addresses using your own domain without additional setup complexity."
+---
+
 ## WPOven Free Email 
 
 ### Introduction
 WPOven allows you to create full-featured mailboxes using your own domain name directly from your dashboard. This guide will walk you through the precise steps to provision a new mailbox.
 
-<span style="color:red">Each account comes with 1 free email , additional emails cost 1 USD / month. </span>
+<!-- <span style="{{ 'color:red' }}">Each account comes with 1 free email , additional emails cost 1 USD / month. </span> -->
+:::warning Pricing
+
+Each account includes **1 free email mailbox**.
+
+Additional mailboxes are billed at **$1/month per mailbox**.
+
+:::
 
 ### Prerequisites
 * Your domain must be active and correctly pointed to your WPOven nameservers or server IP address.

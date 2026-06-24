@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+title: Email Delivery
+description: Learn the different email delivery methods available on WPOven, including SMTP providers, WPOven SureSend, PHP Mail, and domain-authenticated email sending for improved deliverability.
+---
+
 ## Email Delivery (WordPress SMTP)
 
 WordPress’s default mail configuration is prone to delivery failures because standard servers aren’t optimized to handle transactional emails (like password resets, order confirmations, and user notifications). To ensure your emails consistently hit the inbox rather than the spam folder, WPOven supports multiple delivery methods ranging from basic defaults to hardened, secure configurations.
