@@ -3,6 +3,6 @@
   "position": 5,
   "link": {
     "type": "generated-index",
-    "description": "Learn how to set up and manage professional business email services using Zoho Mail, including free custom domain email configuration, SMTP setup, DNS records, SPF, DKIM, DMARC authentication, email routing, and best practices for secure and reliable email delivery."
+    "description": "Learn how to configure, manage, and optimize email for your domains. The articles below provide step-by-step instructions for setting up your free WPOven inbox, configuring email forwarding rules, and routing your WordPress site's transactional emails through reliable SMTP services to ensure maximum deliverability."
   }
 }
