@@ -307,11 +307,11 @@ Send a test email.
 
 ---
 
-### Method 2: WPOven SMTP Suresend
+### Method 2: OvenPress SMTP Suresend
 
 #### Install Plugin
 
-1. Download WPOven SMTP Suresend,  [Click for Download](https://github.com/baseapp/wpoven_suresend/releases).
+1. Download OvenPress SMTP Suresend,  [Click for Download](https://github.com/baseapp/ovenpress_suresend/releases).
 2. Navigate to:
 
     ```text
@@ -329,7 +329,7 @@ Send a test email.
 Navigate to:
 
 ```text
-WPOven → SMTP Suresend
+OvenPress → SMTP Suresend
 ```
 
 Configure:
@@ -368,7 +368,7 @@ Save Changes
 Navigate to:
 
 ```text
-WPOven → SMTP Mail Test
+OvenPress → SMTP Mail Test
 ```
 
 Enter:
@@ -475,5 +475,5 @@ No. However, if your domain uses Cloudflare nameservers, all DNS records must be
 * Zoho Business Email setup guide
 * Cloudflare DNS configuration
 * Zoho Mail Plugin integration
-* WPOven SMTP Suresend integration
+* OvenPress SMTP Suresend integration
 * SMTP testing and troubleshooting

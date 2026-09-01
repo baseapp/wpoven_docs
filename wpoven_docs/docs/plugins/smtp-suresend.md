@@ -1,20 +1,20 @@
 ---
 sidebar_position: 4
-title: "WPOven SMTP Suresend"
+title: "OvenPress SMTP Suresend"
 sidebar_label: "SMTP Suresend"
 description: "Ensures reliable email delivery with seamless SMTP integration."
 ---
 
 **Contributors:** [WPOven](https://www.wpoven.com/)  
-**Requires at least:** 6.6.2  
-**Tested up to:** 6.6.2  
-**Stable tag:** 1.0.0  
+**Requires at least:** 6.6  
+**Tested up to:** 7.1  
+**Stable tag:** 1.0.3  
 **License:** GPLv2 or later  
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Introduction
 
-WPOven SMTP Suresend is a powerful WordPress plugin designed to improve email deliverability by integrating SMTP authentication, logging, and testing features. It ensures that all site emails are sent reliably and securely, reducing the chances of messages landing in spam. 
+OvenPress SMTP Suresend is a powerful WordPress plugin designed to improve email deliverability by integrating SMTP authentication, logging, and testing features. It ensures that all site emails are sent reliably and securely, reducing the chances of messages landing in spam. 
 
 With built-in DKIM authentication support, users can enhance email security and improve domain reputation. 
 
@@ -24,8 +24,8 @@ The plugin offers an intuitive interface for configuring SMTP settings, testing 
 
 ### Download the Plugin
 
-- To get the latest version of WPOven SMTP Suresend :
-  - Download letest from the GitHub repository: [Download](https://github.com/baseapp/wpoven_suresend/releases).
+- To get the latest version of OvenPress SMTP Suresend :
+  - Download letest from the GitHub repository: [Download](https://github.com/baseapp/ovenpress_suresend/releases).
 
 ### Install the Plugin
 
@@ -40,7 +40,7 @@ The plugin offers an intuitive interface for configuring SMTP settings, testing 
 
 ## Configure SMTP Settings
 
-Once activated, go to **WPOven > SMTP Suresend** in the WordPress admin menu.
+Once activated, go to **OvenPress > SMTP Suresend** in the WordPress admin menu.
 
 ![SMTP Suresend Settings](./img/smtp-suresend/smtp-settings.png)
 
@@ -101,29 +101,29 @@ Once activated, go to **WPOven > SMTP Suresend** in the WordPress admin menu.
 
 ## Frequently Asked Questions
 
-- #### What Is WPOven SMTP Suresend?
+- #### What Is OvenPress SMTP Suresend?
 
-  The WPOven SMTP Suresend is a tool designed for managing SMTP configurations, enabling secure and reliable email sending through WordPress.
+  The OvenPress SMTP Suresend is a tool designed for managing SMTP configurations, enabling secure and reliable email sending through WordPress.
 
-- #### What’s required to use WPOven SMTP Suresend?
+- #### What’s required to use OvenPress SMTP Suresend?
 
-  To use WPOven SMTP Suresend, you'll need SMTP server details like address, port, username, password, and encryption method for secure emailing.
+  To use OvenPress SMTP Suresend, you'll need SMTP server details like address, port, username, password, and encryption method for secure emailing.
 
-- #### Is the WPOven SMTP Suresend plugin free?
+- #### Is the OvenPress SMTP Suresend plugin free?
 
-  Yes, the WPOven SMTP Suresend plugin is free.
+  Yes, the OvenPress SMTP Suresend plugin is free.
 
-- #### Will WPOven SMTP Suresend slow down my website ?
+- #### Will OvenPress SMTP Suresend slow down my website ?
 
-  Sending an email using SMTP through WPOven SMTP Suresend doesn't add noticeable delays compared to using PHP's mail function.
+  Sending an email using SMTP through OvenPress SMTP Suresend doesn't add noticeable delays compared to using PHP's mail function.
 
-- #### Who should use WPOven SMTP Suresend Plugin?
+- #### Who should use OvenPress SMTP Suresend Plugin?
 
-  WPOven SMTP Suresend is ideal for anyone using WordPress and needing reliable, secure, and customizable email delivery through SMTP.
+  OvenPress SMTP Suresend is ideal for anyone using WordPress and needing reliable, secure, and customizable email delivery through SMTP.
 
 - #### Can I resend emails that were previously sent using your plugin?
 
-  WPOven SMTP Suresend is ideal for anyone using WordPress and needing reliable, secure, and customizable email delivery through SMTP.
+  OvenPress SMTP Suresend is ideal for anyone using WordPress and needing reliable, secure, and customizable email delivery through SMTP.
 
 - #### Can I resend emails that were previously sent using your plugin?
 
@@ -135,7 +135,21 @@ Once activated, go to **WPOven > SMTP Suresend** in the WordPress admin menu.
 
 ## Changelog
 
-- **1.0.0** ( ***Dec 11, 2024*** )
+- **1.0.3** 
+
+  - Renamed the plugin branding from WPOven to OvenPress.
+
+- **1.0.2** 
+
+  - Added SMTP log retention settings (7 days, 30 days, 90 days, unlimited)
+  - Improved log cleanup performance
+
+- **1.0.1**
+
+  - Added exception handling to prevent email sending when the "From Email" address is not configured.
+
+
+- **1.0.0** 
 
   - Initial release with enhance email reliability with testing, logging, and DKIM settings for secure, trackable, and consistent delivery.
 

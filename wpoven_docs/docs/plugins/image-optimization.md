@@ -1,31 +1,31 @@
 ---
 sidebar_position: 6
-title: "WPOven Image Optimization"
+title: "OvenPress Image Optimization"
 sidebar_label: "Image Optimization"
 description: "Converts images to WebP for faster, optimized website performance."
 ---
 
 **Contributors:** [WPOven](https://www.wpoven.com/)  
-**Requires at least:** 6.6.2  
-**Tested up to:** 6.6.2  
-**Stable tag:** 1.0.0  
+**Requires at least:** 6.6  
+**Tested up to:** 7.1  
+**Stable tag:** 1.0.1   
 **License:** GPLv2 or later  
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Introduction
 
-WPOven Image Optimization is a WordPress plugin designed to enhance website performance by converting images to the WebP format. This helps in reducing file sizes and improving page load speeds, which boosts SEO and user experience.
+OvenPress Image Optimization is a WordPress plugin designed to enhance website performance by converting images to the WebP format. This helps in reducing file sizes and improving page load speeds, which boosts SEO and user experience.
 
 The plugin offers automatic optimization on image upload, bulk optimization for existing media, and various compression levels to balance quality and file size. It also supports multiple methods for serving WebP images, including rewrite rules and the `<picture>` tag approach for maximum compatibility.
 
-With its easy-to-use interface and powerful optimization features, WPOven Image Optimization ensures your website stays fast and efficient.
+With its easy-to-use interface and powerful optimization features, OvenPress Image Optimization ensures your website stays fast and efficient.
 
 ## Installation
 
 ### Download the Plugin
 
-- To get the latest version of WPOven Image Optimization :
-  - Download directly from the GitHub repository: [Download](https://github.com/baseapp/wpoven_imageoptim/releases).
+- To get the latest version of OvenPress Image Optimization :
+  - Download directly from the GitHub repository: [Download](https://github.com/baseapp/ovenpress_imageoptim/releases).
 
 ### Install the Plugin
 
@@ -40,7 +40,7 @@ With its easy-to-use interface and powerful optimization features, WPOven Image 
 
 ## Configure Plugin Settings
 
-Once activated, go to **WPOven > Image Optimization** in the WordPress admin menu.
+Once activated, go to **OvenPress > Image Optimization** in the WordPress admin menu.
 
 ![Image Optimization Settings](./img/image-optimization/settings.png)
 
@@ -50,7 +50,7 @@ Once activated, go to **WPOven > Image Optimization** in the WordPress admin men
 |-----------------------|--------------|
 | **Auto-Optimize images on upload**| When enabled, every uploaded image is automatically optimized.|
 | **Next-Gen format**| **Options:** <br />`WEBP`: Generates WebP versions of images.<br /> `OFF`: Disables WebP generation.|
-| **Display images in Next-Gen format on the site** | **Options:**<br /> **Use rewrite rules**: Uses server-side rules to serve WebP images. Requires adding `conf/wpoven.conf` to the server and restarting it.<br /> **Use `<picture>` tags (Preferred)**: Uses `<picture>` tags instead of `<img>`, ensuring better compatibility.|
+| **Display images in Next-Gen format on the site** | **Options:**<br /> **Use rewrite rules**: Uses server-side rules to serve WebP images. Requires adding `conf/ovenpress.conf` to the server and restarting it.<br /> **Use `<picture>` tags (Preferred)**: Uses `<picture>` tags instead of `<img>`, ensuring better compatibility.|
 | **Image compression level** | **Dropdown (0-9):**<br /> `0` = No compression (higher quality),<br /> `9` = Maximum compression (smaller size, lower quality).|
 
 
@@ -103,9 +103,9 @@ Once activated, go to **WPOven > Image Optimization** in the WordPress admin men
 
 ## Frequently Asked Questions
 
-- #### What Is WPOven Image Optimization?
+- #### What Is OvenPress Image Optimization?
 
-    WPOven Image Optimization converts images to WebP, reducing file sizes for faster loading, improved performance, and enhanced user experience with bulk and auto optimizations features.
+    OvenPress Image Optimization converts images to WebP, reducing file sizes for faster loading, improved performance, and enhanced user experience with bulk and auto optimizations features.
 
 - #### Will this plugin affect image quality?
 
@@ -129,7 +129,11 @@ Once activated, go to **WPOven > Image Optimization** in the WordPress admin men
 
 ## Changelog
 
-- **1.0.0** ( ***Nov 13, 2024*** )
+- **1.0.1**
+
+    - Renamed the plugin branding from WPOven to OvenPress.
+
+- **1.0.0**
 
     - Initial release with optimized image delivery in modern WebP format to improve load times and enhance SEO performance.
 

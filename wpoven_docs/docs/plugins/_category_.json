@@ -1,8 +1,8 @@
 {
-  "label": "WPOven Plugins",
+  "label": "OvenPress Plugins",
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Explore and manage WPOven plugins for enhanced functionality and performance."
+    "description": "Explore and manage OvenPress plugins for enhanced functionality and performance."
   }
 }

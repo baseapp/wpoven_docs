@@ -13,7 +13,7 @@ It applies to:
 - WPOven Free Email
 - Email Forwarding
 - Email Delivery (SMTP)
-- WPOven SMTP Suresend
+- OvenPress SMTP Suresend
 - Zoho Mail
 - Cloudflare Email Routing
 - SPF

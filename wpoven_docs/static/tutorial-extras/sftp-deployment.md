@@ -51,7 +51,7 @@ jobs:
 
 ## Deploy React App Example
 ```yaml
-name: Deploy WPOven Plugin Docs via SFTP
+name: Deploy OvenPress Plugin Docs via SFTP
 
 on:
   push:

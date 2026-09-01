@@ -1,20 +1,20 @@
 ---
 sidebar_position: 1
-title: "WPOven Cloudshield"
+title: "OvenPress Cloudshield"
 sidebar_label: "Cloudshield"
 description: "Enhances WordPress security with Cloudflare protection against threats."
 ---
 
 **Contributors:** [WPOven](https://www.wpoven.com/)  
-**Requires at least:** 6.6.2  
-**Tested up to:** 6.6.2  
-**Stable tag:** 1.0.0  
-**License:** GPLv2 or later  
+**Requires at least:** 6.6  
+**Tested up to:** 7.1  
+**Stable tag:** 1.0.1   
+**License:** GPLv2 or later   
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Introduction
 
-WPOven CloudShield is a robust security plugin designed to safeguard your WordPress website using Cloudflare's powerful capabilities. This plugin provides comprehensive protection against various threats, ensuring the safety and performance of your site.
+OvenPress CloudShield is a robust security plugin designed to safeguard your WordPress website using Cloudflare's powerful capabilities. This plugin provides comprehensive protection against various threats, ensuring the safety and performance of your site.
 
 ## Prerequisites
 
@@ -147,8 +147,8 @@ Follow these steps to set up a custom rule for your domain.
 
 ### Download the Plugin
 
-- To get the latest version of WPOven Cloudshield :
-  - Download directly from the GitHub repository: [Download](https://github.com/baseapp/wpoven_cloudshield/releases).
+- To get the latest version of OvenPress Cloudshield :
+  - Download directly from the GitHub repository: [Download](https://github.com/baseapp/ovenpress_cloudshield/releases).
 
 ### Install the Plugin
 
@@ -163,7 +163,7 @@ Follow these steps to set up a custom rule for your domain.
 
 ## Configure Cloudshield Settings
 
-Once activated, go to **WPOven > Cloudshield** in the WordPress admin menu.
+Once activated, go to **OvenPress > Cloudshield** in the WordPress admin menu.
 
 ![Cloudshield Settings](./img/cloudshield/cloudshield.png)
 ![Cloudshield Settings](./img/cloudshield/cloud-settings.png)
@@ -250,25 +250,26 @@ Once activated, go to **WPOven > Cloudshield** in the WordPress admin menu.
 
 ## Frequently Asked Questions
 
-- #### What does WPOven CloudShield do?
-  WPOven CloudShield secures your WordPress site by integrating Cloudflare features like login CAPTCHA, IP blocking, country restrictions, bot management, and XMLRPC protection.
+- #### What does OvenPress CloudShield do?
+  OvenPress CloudShield secures your WordPress site by integrating Cloudflare features like login CAPTCHA, IP blocking, country restrictions, bot management, and XMLRPC protection.
 - #### How does the plugin block unwanted crawlers?
   The plugin identifies and blocks non-SEO and AI crawlers, ensuring only legitimate traffic interacts with your site, reducing server load and enhancing performance.
 - #### Can I block specific countries from accessing my website?
-  Yes, WPOven CloudShield allows you to restrict access from specific countries through its country-blocking feature.
+  Yes, OvenPress CloudShield allows you to restrict access from specific countries through its country-blocking feature.
 - #### Does the plugin protect against brute-force login attacks?
   Absolutely. The plugin uses Cloudflare's CAPTCHA and IP blocking to prevent brute-force attacks and unauthorized access attempts effectively.
 - #### How is IP blocking managed?
   IPs can be blocked based on failed login attempts, custom rules, high request rates, or other suspicious activity patterns.
-- #### Does WPOven CloudShield work with all WordPress setups?
+- #### Does OvenPress CloudShield work with all WordPress setups?
   Yes, the plugin is compatible with most WordPress setups and works seamlessly with Cloudflare to enhance your site's security.
 
 ## Changelog
 
-- **1.0.0** ( **_Dec 11, 2024_** )
+- **1.0.1**
+  - Renamed the plugin branding from WPOven to OvenPress.
 
-  - Initial release with Added Cloudflare integration with CAPTCHA, IP blocking, country restrictions, XMLRPC protection, crawler management,
-    404 protection, and a user-friendly security settings interface.
+- **1.0.0**
+  - Initial release with Added Cloudflare integration with CAPTCHA, IP blocking, country restrictions, XMLRPC protection, crawler management, 404 protection, and a user-friendly security settings interface.
 
 ## Upgrade Notice
 

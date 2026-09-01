@@ -68,10 +68,10 @@ Configure the following settings:
 
 | Setting  | Value             |
 | -------- | ----------------- |
-| Requests | 10                |
-| Period   | 1 minute          |
+| Requests | 5                |
+| Period   | 10 seconds(free plan)|
 | Action   | Managed Challenge |
-| Duration | 10 minutes        |
+| Duration | 10 seconds (free plan)|
 
 ### Step 4: Deploy the Rule
 

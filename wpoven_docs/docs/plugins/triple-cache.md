@@ -1,20 +1,20 @@
 ---
 sidebar_position: 2
-title: "WPOven Triple Cache"
+title: "OvenPress Triple Cache"
 sidebar_label: "Triple Cache"
 description: "Boosts speed with advanced caching and Cloudflare integration."
 ---
 
 **Contributors:** [WPOven](https://www.wpoven.com/)  
-**Requires at least:** 6.6.2  
-**Tested up to:** 6.6.2  
-**Stable tag:** 1.0.0  
-**License:** GPLv2 or later  
+**Requires at least:** 6.6  
+**Tested up to:** 7.1  
+**Stable tag:** 1.0.3   
+**License:** GPLv2 or later   
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Introduction
 
-WPOven Triple Cache is a powerful WordPress plugin that enhances website speed and performance through advanced caching and seamless Cloudflare integration. It optimizes page load times, server performance, and security, ensuring a fast and efficient browsing experience. 
+OvenPress Triple Cache is a powerful WordPress plugin that enhances website speed and performance through advanced caching and seamless Cloudflare integration. It optimizes page load times, server performance, and security, ensuring a fast and efficient browsing experience. 
 
 The plugin provides automatic cache purging, customizable caching rules, and easy configuration options, making it a must-have for WordPress users looking to improve their site's performance effortlessly.
 
@@ -22,8 +22,8 @@ The plugin provides automatic cache purging, customizable caching rules, and eas
 
 ### Download the Plugin
 
-- To get the latest version of WPOven Triple Cache :
-  - Download directly from the GitHub repository: [Download](https://github.com/baseapp/wpoven_triplecache/releases).
+- To get the latest version of OvenPress Triple Cache :
+  - Download directly from the GitHub repository: [Download](https://github.com/baseapp/ovenpress_triplecache/releases).
 
 ### Install the Plugin
 
@@ -38,11 +38,11 @@ The plugin provides automatic cache purging, customizable caching rules, and eas
 
 ## Configure Triple Cache Settings
 ### Cloudflare Settings
-Once activated, go to **WPOven > Triple Cache** in the WordPress admin menu.
+Once activated, go to **OvenPress > Triple Cache** in the WordPress admin menu.
 
 ![Cloudflare Settings](./img/triple-cache/settings.png)
 
-    The **Cloudflare Settings** section allows you to integrate Cloudflare caching with **WPOven Triple Cache**. Follow the steps below to set up your Cloudflare API key and enable caching.
+    The **Cloudflare Settings** section allows you to integrate Cloudflare caching with **OvenPress Triple Cache**. Follow the steps below to set up your Cloudflare API key and enable caching.
 
 - #### How to Get Your Cloudflare API Key?
 
@@ -105,17 +105,17 @@ After configuring the settings, click `Save Changes` to apply them.
 
 ## Frequently Asked Questions
 
-- #### What Is WPOven Triple Cache plugin?
+- #### What Is OvenPress Triple Cache plugin?
 
-  The WPOven Triple Cache plugin for WordPress integrates Cloudflare to provide advanced caching, resulting in lightning-fast page loads, optimized server performance, and enhanced security.
+  The OvenPress Triple Cache plugin for WordPress integrates Cloudflare to provide advanced caching, resulting in lightning-fast page loads, optimized server performance, and enhanced security.
 
 - #### What happens if I delete the plugin?
 
   I recommend disabling the plugin before deleting it, which will allow you to restore all information on Cloudflare. After that, you can proceed with the removal. This plugin will erase all stored data from the database, keeping your WordPress installation tidy.
 
-- #### Is the WPOven Triple Cache plugin free?
+- #### Is the OvenPress Triple Cache plugin free?
 
-  Yes, the WPOven Triple Cache plugin is free.
+  Yes, the OvenPress Triple Cache plugin is free.
 
 - #### Can I restore all Cloudflare settings as before the plugin activation?
 
@@ -130,8 +130,20 @@ After configuring the settings, click `Save Changes` to apply them.
   Yes. This is the main purpose of this plugin.
 
 ## Changelog
+- **1.0.3** 
+  - Renamed the plugin branding from WPOven to OvenPress.
 
-- **1.0.0** (**_Dec 11, 2024_**)
+- **1.0.2** 
+  - Fixing a bug where the admin cannot delete WordPress users after activating the plugin.
+
+- **1.0.1** 
+  - Added Redis Object Cache integration to improve database query performance.
+  - Introduced File-based Caching for faster page load times.
+  - Added Varnish Cache support with automatic cache purge on content updates.
+  - Added JavaScript Optimization (minification and deferred loading).
+  - Implemented Lazy Load for images to reduce initial page load time.
+
+- **1.0.0** 
 
   - Initial release with integrated Cloudflare for advanced caching and security.
 

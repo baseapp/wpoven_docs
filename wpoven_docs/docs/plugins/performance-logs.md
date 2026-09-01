@@ -1,29 +1,29 @@
 ---
 sidebar_position: 5
-title: "WPOven Performance Logs"
+title: "OvenPress Performance Logs"
 sidebar_label: "Performance Logs"
 description: "Logs all page-related data for detailed performance analysis."
 ---
 
 **Contributors:** [WPOven](https://www.wpoven.com/)  
-**Requires at least:** 6.6.2  
-**Tested up to:** 6.6.2  
-**Stable tag:** 1.0.0  
+**Requires at least:** 6.6  
+**Tested up to:** 7.1  
+**Stable tag:** 1.0.3  
 **License:** GPLv2 or later  
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Introduction
 
-WPOven Performance Logs is a powerful WordPress plugin designed to track and analyze website performance metrics. It provides detailed insights into PHP execution time, database query execution, CPU load, IP tracking, and memory usage. This plugin is ideal for developers, site owners, and agencies who want to monitor and optimize their website’s performance efficiently.
+OvenPress Performance Logs is a powerful WordPress plugin designed to track and analyze website performance metrics. It provides detailed insights into PHP execution time, database query execution, CPU load, IP tracking, and memory usage. This plugin is ideal for developers, site owners, and agencies who want to monitor and optimize their website’s performance efficiently.
 
-With features like admin page logging, database query logging, log retention settings, and URL filtering, WPOven Performance Logs helps users identify performance bottlenecks and improve website speed and stability. The plugin is free to use and ensures seamless integration with WordPress.
+With features like admin page logging, database query logging, log retention settings, and URL filtering, OvenPress Performance Logs helps users identify performance bottlenecks and improve website speed and stability. The plugin is free to use and ensures seamless integration with WordPress.
 
 ## Installation
 
 ### Download the Plugin
 
-- To get the latest version of WPOven Performance Logs :
-  - Download letest from the GitHub repository: [Download](https://github.com/baseapp/wpoven_perflogs/releases).
+- To get the latest version of OvenPress Performance Logs :
+  - Download letest from the GitHub repository: [Download](https://github.com/baseapp/ovenpress_perflogs/releases).
 
 ### Install the Plugin
 
@@ -38,7 +38,7 @@ With features like admin page logging, database query logging, log retention set
 
 ## Configure Performance Logs Settings
 
-Once activated, go to **WPOven > Performance Logs** in the WordPress admin menu.
+Once activated, go to **OvenPress > Performance Logs** in the WordPress admin menu.
 
 ![Performance Logs Settings](./img/performance-logs/settings.png)
 
@@ -93,11 +93,11 @@ Once activated, go to **WPOven > Performance Logs** in the WordPress admin menu.
 
 ## Frequently Asked Questions
 
-- #### What is WPOven Performance Logs?
+- #### What is OvenPress Performance Logs?
 
-    WPOven Performance Logs plugin, designed to help you monitor critical performance metrics. Effortlessly log PHP execution time, database query execution time, total    number of queries executed, CPU load time, IP address tracking, and peak memory usage to monitor your website's performance.
+    OvenPress Performance Logs plugin, designed to help you monitor critical performance metrics. Effortlessly log PHP execution time, database query execution time, total    number of queries executed, CPU load time, IP address tracking, and peak memory usage to monitor your website's performance.
 
-- #### Is the 'WPOven Performance Logs' plugin free?
+- #### Is the 'OvenPress Performance Logs' plugin free?
 
     Yes, completely free with no hidden charges.
 
@@ -111,9 +111,25 @@ Once activated, go to **WPOven > Performance Logs** in the WordPress admin menu.
 
 ## Changelog
 
-- **1.0.0** ( ***Dec 11, 2024*** )
+- **1.0.3**
 
-    - Initial release with added performance monitoring for PHP execution time, database queries, CPU load, IP tracking, and peak memory usage in the WPOven Performance Logs plugin.
+    - Renamed the plugin branding from WPOven to OvenPress.
+
+- **1.0.2**
+
+    - Fixed database error caused by missing post_arguments column in wp_performance_logs table.
+    - Improved database schema validation before inserting performance log data.
+    - Prevented fatal errors during performance logging on production sites.
+
+
+- **1.0.1**
+
+    - Added conditional logging to record entries only when a request exceeds configured limits.
+    - Added display of POST request arguments in the log viewer for easier debugging.
+
+- **1.0.0**
+
+    - Initial release with PHP execution time tracking, database query analysis, system resource monitoring, and IP address tracking for optimized performance and security.
 
 ## Upgrade Notice
 

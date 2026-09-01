@@ -8,7 +8,7 @@ sidebar_position: 5
 
 DKIM (DomainKeys Identified Mail) is an email authentication method that digitally signs outgoing emails, allowing receiving mail servers to verify that the message was sent by an authorized sender and has not been modified during transmission.
 
-WPOven SMTP Suresend includes built-in DKIM support, making it easy to generate and configure DKIM records for your domain.
+OvenPress SMTP Suresend includes built-in DKIM support, making it easy to generate and configure DKIM records for your domain.
 
 ## Why Configure DKIM?
 
@@ -33,7 +33,7 @@ For the best email deliverability, configure SPF, DKIM, and DMARC records togeth
 
 Before proceeding with DKIM configuration:
 
-* Install and activate **WPOven SMTP Suresend**.
+* Install and activate **OvenPress SMTP Suresend**.
 * Configure and test your SMTP connection.
 * Ensure you have access to your domain DNS settings.
 * Set up a valid custom domain email address (e.g., `admin@example.com`).
@@ -41,7 +41,7 @@ Before proceeding with DKIM configuration:
 
 ### Download Plugin
 
-https://github.com/baseapp/wpoven_suresend/releases
+https://github.com/baseapp/ovenpress_suresend/releases
 
 
 ---
@@ -55,7 +55,7 @@ Navigate to:
 
 ```text
 WordPress Dashboard
-→ WPOven Plugins  → SMTP Suresend → SMTP Settings
+→ OvenPress Plugins  → SMTP Suresend → SMTP Settings
 ```
 
 Configure the following:
@@ -90,7 +90,7 @@ Navigate to:
 
 ```text
 WordPress Dashboard
-→ WPOven Plugins  → SMTP Suresend → DKIM Settings
+→ OvenPress Plugins  → SMTP Suresend → DKIM Settings
 ```
 
 You will see:
@@ -111,7 +111,7 @@ Enable DKIM
 [ ON ]
 ```
 
-Once enabled, WPOven SMTP Suresend automatically generates a DKIM public key for your domain.
+Once enabled, OvenPress SMTP Suresend automatically generates a DKIM public key for your domain.
 
 ---
 
@@ -394,7 +394,7 @@ SMTP ensures emails can be sent, while DKIM verifies that the emails are authent
 
 Yes.
 
-WPOven SMTP Suresend works with Zoho Mail, Google Workspace, Microsoft 365, and most SMTP providers.
+OvenPress SMTP Suresend works with Zoho Mail, Google Workspace, Microsoft 365, and most SMTP providers.
 
 ---
 
