@@ -70,7 +70,7 @@ Configure the following settings:
 | -------- | ----------------- |
 | Requests | 5                |
 | Period   | 10 seconds(free plan)|
-| Action   | Managed Challenge |
+| Action   | Block (free plan) |
 | Duration | 10 seconds (free plan)|
 
 ### Step 4: Deploy the Rule
