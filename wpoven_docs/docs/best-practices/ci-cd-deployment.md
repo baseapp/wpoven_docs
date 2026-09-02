@@ -46,9 +46,9 @@ Host: sftp.example.com
 Username: wpoven_user
 Password: ********
 Remote Path:
-/srv/www/rfspan.com/public_html/wp-content/plugins
+/srv/www/example.com/public_html/wp-content/plugins
             or
-/srv/www/rfspan.com/public_html/wp-content/themes
+/srv/www/example.com/public_html/wp-content/themes
 ```
 
 ---
@@ -114,7 +114,7 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           sftp_only: true
           local_path: "your_github_plugin_path/*"
-          remote_path: "/srv/www/rfspan.com/public_html/wp-content/plugins or themes"
+          remote_path: "/srv/www/example.com/public_html/wp-content/plugins or themes"
 ```
 
 ---

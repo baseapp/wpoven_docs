@@ -1,6 +1,6 @@
 ---
 title: Cloudflare Security Rules
-description: Learn how to create and manage Cloudflare WAF rules, including Rate Limiting, XML-RPC protection, and WordPress login page security.
+description: Learn how to create and manage Cloudflare Security rules, including Rate Limiting, XML-RPC protection, and WordPress login page security.
 sidebar_position: 2
 ---
 
@@ -14,10 +14,10 @@ Before creating any rules:
 
 1. Log in to your [Cloudflare](https://www.cloudflare.com/) Dashboard.
 2. Select your website.
-3. Navigate to **Security > WAF/Security Rules**.
+3. Navigate to **Security > Security Rules**.
 4. Click **Create Rule**.
 
-![Navigate to Security > WAF in the Cloudflare Dashboard](./images/security-rule.png)
+![Navigate to Security > Security Rules in the Cloudflare Dashboard](./images/security-rule.png)
 
 ---
 
@@ -29,7 +29,7 @@ Rate Limiting helps protect your website from brute-force attacks and excessive 
 
 1. Open your Cloudflare Dashboard.
 2. Select your domain.
-3. Go to **Security > WAF/Security Rules**.
+3. Go to **Security > Security Rules**.
 4. Click **Create Rule**.
 5. Click **Rate limiting rules**.
 
@@ -62,6 +62,8 @@ equals
 /wp-login.php
 ```
 
+![Configure New Rule > New Rule in the Cloudflare Dashboard](./images/new-rule.png)
+
 ### Step 3: Configure Rate Limit Settings
 
 Configure the following settings:
@@ -72,6 +74,9 @@ Configure the following settings:
 | Period   | 10 seconds(free plan)|
 | Action   | Block (free plan) |
 | Duration | 10 seconds (free plan)|
+| Status   | Active            |
+
+![Rule Options > Security Rules option for new rate limiting rule](./images/new-rule-option.png)
 
 ### Step 4: Deploy the Rule
 
@@ -87,7 +92,7 @@ The XML-RPC endpoint is frequently targeted by attackers for brute-force and DDo
 
 ### Step 1: Create a Custom Rule
 
-1. Open **Security > WAF/Security Rules**.
+1. Open **Security > Security Rules**.
 2. Click **Create Rule**.
 3. Click **Custom Rules**.
 
@@ -106,6 +111,7 @@ Select:
 | Field    | Operator | Value       |
 | -------- | -------- | ----------- |
 | URI Path | equals   | /xmlrpc.php |
+| Status |    | Active   |
 
 Or use the expression editor:
 
@@ -120,6 +126,8 @@ Choose:
 ```text
 Block
 ```
+
+![Block XMLRPC > Security Rules for block xmlrpc](./images/xmlrpc-rule.png)
 
 ### Step 5: Deploy the Rule
 
@@ -140,7 +148,7 @@ The WordPress login page is a common target for brute-force login attempts.
 
 ### Step 1: Create a Custom Rule
 
-1. Navigate to **Security > WAF/Security Rules**.
+1. Navigate to **Security > Security Rules**.
 2. Click **Create Rule**.
 3. Click **Custom Rules**.
 
@@ -159,6 +167,7 @@ Select:
 | Field    | Operator | Value         |
 | -------- | -------- | ------------- |
 | URI Path | equals   | /wp-login.php |
+| Status |    | Active   |
 
 Or use the expression editor:
 
@@ -173,12 +182,7 @@ Recommended:
 ```text
 Managed Challenge
 ```
-
-Alternative:
-
-```text
-Block
-```
+![Protect WP-login > Security Rules for protect wordpress login](./images/protect-login-rule.png)
 
 ### Step 5: Deploy the Rule
 
@@ -194,7 +198,7 @@ Block
 * Monitor Cloudflare Security Events after deploying new rules.
 * Test each rule before applying it to production environments.
 * Review security logs regularly for false positives.
-* Combine WAF rules with Rate Limiting for stronger protection.
+* Combine security rules with Rate Limiting for stronger protection.
 
 ## Troubleshooting
 
