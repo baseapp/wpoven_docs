@@ -1,5 +1,5 @@
 ---
-title: "Cloudflare Zero Trust: Enable Email OTP Authentication for WordPress"
+title: "Cloudflare Zero Trust: Email OTP Auth for WordPress"
 description: Learn how to configure Cloudflare Zero Trust Access to protect your website and WordPress login pages with email OTP-based authentication without requiring an authenticator app.
 sidebar_position: 4
 ---
