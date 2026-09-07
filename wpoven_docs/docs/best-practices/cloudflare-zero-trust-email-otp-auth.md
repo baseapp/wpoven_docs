@@ -1,16 +1,16 @@
 ---
-title: "Cloudflare Zero Trust: Email OTP Auth for WordPress"
-description: Learn how to configure Cloudflare Zero Trust Access to protect your website and WordPress login pages with email OTP-based authentication without requiring an authenticator app.
+title: "Cloudflare Zero Trust: Enable 2FA for WordPress"
+description: Learn how to configure Cloudflare Zero Trust Access to protect your website and WordPress login pages with email OTP-based 2FA, without requiring an authenticator app.
 sidebar_position: 4
 ---
 
-# Cloudflare Zero Trust: Enable Email OTP Authentication for WordPress
+# Cloudflare Zero Trust: Enable 2FA for WordPress
 
-Cloudflare Zero Trust Access adds an extra layer of security to your applications and WordPress login pages by requiring users to verify their identity before they can access them.
+Cloudflare Zero Trust Access adds an extra layer of security to your WordPress site by requiring users to verify their identity before accessing protected applications or WordPress login pages.
 
-With Email One-Time Password (OTP) authentication, users receive a unique, single-use code directly in their email. They can use this code to securely sign in without installing an authenticator app or using a security key.
+With Email One-Time Password (OTP) authentication, users receive a unique, one-time code by email. They can enter this code to verify their identity without installing an authenticator app or using a security key.
 
-Cloudflare Access sits in front of the application and evaluates incoming requests against the configured Access policies before forwarding authorized requests to the origin.
+Cloudflare Access sits in front of your application and evaluates each incoming request against your configured Access policies. Only authorized users are allowed to continue to the WordPress application or origin server.
 
 ---
 

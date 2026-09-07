@@ -1,25 +1,25 @@
 ---
 sidebar_position: 8
-title: CI/CD Deployment for WPOven
+title: Deploy Plugin or Theme via SFTP using GitHub Actions
 description: Automate deployment of WordPress plugin and theme using GitHub Actions and SFTP.
 ---
 
-# CI/CD Deployment for WPOven
+# Deploy Plugin or Theme via SFTP using GitHub Actions
 
-This guide explains how to automatically build and deploy your WordPress plugin or theme to your WPOven server using **GitHub Actions** and **SFTP**.
+This guide explains how to automatically deploy your WordPress plugin or theme to your WPOven server using **GitHub Actions** and **SFTP**.
 
-Instead of manually uploading plugin/theme after every update, GitHub Actions can automatically:
+Instead of manually uploading your plugin or theme after every update, GitHub Actions can automatically:
 
-- Check your plugin/theme files.
+- Check out the latest files from your GitHub repository.
 - Connect to your WPOven server via SFTP.
-- Upload the generated files to your server.
-- upload the latest files/folders whenever you push changes to your GitHub repository.
+- Upload the plugin or theme files to the specified directory.
+- Deploy the latest changes whenever you push to the configured branch.
 
 ---
 
 ## Prerequisites
 
-Before configuring CI/CD, ensure you have:
+Before configuring automated deployment, ensure you have:
 
 - A GitHub repository containing your plugin or theme.
 - A WPOven server.
@@ -37,7 +37,7 @@ Log in to your WPOven dashboard and note the following details:
 | Host | Your server hostname or IP |
 | Username | SFTP username |
 | Password | SFTP password |
-| Remote Directory | Destination directory for documentation |
+| Remote Directory | Destination directory for plugins/themes |
 
 Example:
 
@@ -46,9 +46,11 @@ Host: sftp.example.com
 Username: wpoven_user
 Password: ********
 Remote Path:
-/srv/www/example.com/public_html/wp-content/plugins
-            or
-/srv/www/example.com/public_html/wp-content/themes
+Plugin:
+/srv/www/example.com/public_html/wp-content/plugins/my-plugin
+
+Theme:
+/srv/www/example.com/public_html/wp-content/themes/my-theme
 ```
 
 ---
@@ -89,7 +91,7 @@ Create the following file:
 Paste the following workflow.
 
 ```yaml
-name: Deploy WPOven Plugin Docs via SFTP
+name: Deploy WordPress Plugin to WPOven
 
 on:
   push:
@@ -102,9 +104,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
-
-      
+        uses: actions/checkout@v5
 
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.5
@@ -113,8 +113,8 @@ jobs:
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
           sftp_only: true
-          local_path: "your_github_plugin_path/*"
-          remote_path: "/srv/www/example.com/public_html/wp-content/plugins or themes"
+          local_path: "./plugin-files/*"
+          remote_path: "/srv/www/example.com/public_html/wp-content/plugins/my-plugin"
 ```
 
 ---
@@ -124,44 +124,10 @@ jobs:
 ## Checkout Repository
 
 ```yaml
-uses: actions/checkout@v3
+uses: actions/checkout@v5
 ```
 
 Downloads your repository into the GitHub Actions runner.
-
----
-
-## Setup Node.js
-
-```yaml
-uses: actions/setup-node@v3
-```
-
-Installs Node.js so Docusaurus can build your documentation.
-
----
-
-## Install Dependencies
-
-```bash
-npm install
-```
-
-Installs all required Node.js packages.
-
----
-
-## Build Documentation
-
-```bash
-npm run build
-```
-
-Generates the static website inside:
-
-```
-wpoven_docs/build
-```
 
 ---
 
@@ -171,20 +137,16 @@ wpoven_docs/build
 uses: wlixcc/SFTP-Deploy-Action@v1.2.5
 ```
 
-Uploads the generated static files to your WPOven server using SFTP.
+Uploads the plugin and theme files to your WPOven server using SFTP.
 
 Files are uploaded from:
-
+```yaml
+./plugin-files/
 ```
-wpoven_docs/build/
+to:
+```yaml
+/srv/www/example.com/public_html/wp-content/plugins/my-plugin
 ```
-
-to
-
-```
-/public_html/docs_html
-```
-
 ---
 
 # Directory Structure
@@ -198,13 +160,6 @@ my-plugin/
 │   └── workflows/
 │       └── deploy.yml
 │
-├── wpoven_docs/
-│   ├── build/
-│   ├── docs/
-│   ├── src/
-│   ├── package.json
-│   └── docusaurus.config.js
-│
 └── plugin-files/
 ```
 
@@ -216,20 +171,14 @@ Every time you push changes to the **main** branch:
 
 1. GitHub Actions starts automatically.
 2. The repository is cloned.
-3. Node.js is installed.
-4. Documentation dependencies are installed.
-5. Docusaurus builds the static website.
-6. The generated files are uploaded to your WPOven server.
-7. Your documentation is immediately updated.
+3. The plugin or theme files are uploaded to your WPOven server.
+4. Your plugin or theme is updated on the WPOven server.
 
 ```
 Push Code
      │
      ▼
 GitHub Actions
-     │
-     ▼
-Build Docusaurus
      │
      ▼
 Upload via SFTP
@@ -242,18 +191,12 @@ WPOven Server
 
 # Customizing the Deployment Path
 
-If you want to publish documentation to a different directory, update the `remote_path` value.
+If you want to publish plugin or theme to a different directory, update the `remote_path` value.
 
 Example:
 
 ```yaml
-remote_path: "/public_html/plugin-docs"
-```
-
-or
-
-```yaml
-remote_path: "/public_html/theme-docs"
+remote_path: "/your_remote_plugin_path/"
 ```
 
 ---
@@ -266,14 +209,7 @@ To deploy only when pushing to another branch, update:
 on:
   push:
     branches:
-      - develop
-```
-
-or
-
-```yaml
-branches:
-  - production
+      - branch_name
 ```
 
 ---
@@ -290,26 +226,12 @@ Verify that:
 
 ---
 
-## Build Failed
-
-Ensure:
-
-```bash
-npm install
-npm run build
-```
-
-work successfully on your local machine before pushing.
-
----
-
 ## Files Not Uploaded
 
 Check:
 
-- The `remote_path` exists.
 - The SFTP user has write permissions.
-- The `local_path` points to the correct Docusaurus build directory.
+- The `local_path` points to the correct plugin or theme directory.
 
 ---
 
@@ -318,11 +240,10 @@ Check:
 - Never hardcode SFTP credentials in your workflow.
 - Always store credentials using GitHub Secrets.
 - Test the workflow with a staging server before deploying to production.
-- Keep your Node.js version updated.
 - Review workflow logs in the **Actions** tab if a deployment fails.
 
 ---
 
 # Conclusion
 
-By integrating GitHub Actions with WPOven, you can fully automate the deployment of your WordPress plugin or theme documentation. Every push to your repository triggers a fresh Docusaurus build and securely uploads the latest documentation to your server via SFTP, eliminating manual uploads and ensuring your documentation stays up to date.
+By integrating GitHub Actions with WPOven Server using SFTP, you can automate the deployment of your WordPress plugin or theme. Every push to the configured branch triggers a deployment that securely uploads the latest plugin or theme files to your WPOven server via SFTP. This eliminates manual uploads and helps keep your WordPress installation up to date.
