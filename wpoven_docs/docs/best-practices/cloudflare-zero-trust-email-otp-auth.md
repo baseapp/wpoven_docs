@@ -23,7 +23,7 @@ Cloudflare Access sits in front of your application and evaluates each incoming 
 
 ---
 
-## Prerequisites
+### Prerequisites
 
 Before setting up Email OTP-based Authentication:
 
@@ -34,7 +34,7 @@ Before setting up Email OTP-based Authentication:
 
 ---
 
-## Step 1: Access Cloudflare Zero Trust & Verify Identity Provider
+### Step 1: Access Cloudflare Zero Trust & Verify Identity Provider
 
 Cloudflare Access supports One-Time PIN (OTP) as a built-in email-based authentication method. For newly created Zero Trust organizations, OTP may not be enabled by default, so you may need to add it under Zero Trust → Integrations → Identity providers.
 
@@ -59,7 +59,7 @@ Cloudflare Access supports One-Time PIN (OTP) as a built-in email-based authenti
 
 ---
 
-## Step 2: Configure Access Policies
+### Step 2: Configure Access Policies
 
 1. In the Zero Trust Dashboard, go to **Access controls > Policies**.
 
@@ -89,7 +89,7 @@ Always combine the One-Time PIN login method with an appropriate Include rule, s
 
 ---
 
-## Step 3: Create a Cloudflare Access Application
+### Step 3: Create a Cloudflare Access Application
 
 Next, create an Access Application to define which URLs or endpoints require Email OTP authentication.
 
@@ -142,7 +142,7 @@ Next, create an Access Application to define which URLs or endpoints require Ema
 
 ---
 
-## Step 4: Test the Email OTP Authentication
+### Step 4: Test the Email OTP Authentication
 
 1. Open your website in a new browser or incognito window.
 2. Navigate to the protected URL (e.g., `https://example.com/wp-login.php`).
