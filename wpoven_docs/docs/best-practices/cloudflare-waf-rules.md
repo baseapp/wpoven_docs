@@ -195,7 +195,7 @@ Bot Fight Mode helps detect and mitigate automated bot traffic, reducing unwante
 
 ## Enable Browser Integrity Check
 
-Bot Fight Mode helps detect and mitigate automated bot traffic, reducing unwanted requests and protecting your website from malicious bots.
+Enable Cloudflare Browser Integrity Check to detect and challenge requests from suspicious browsers, bots, and automated clients using HTTP headers and browser signals, helping reduce malicious traffic to your website.
 
 **Step 1.** Navigate to **Security > Settings**.
 
