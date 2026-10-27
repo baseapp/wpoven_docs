@@ -160,7 +160,7 @@ This rule challenges requests from countries outside your target markets using C
 | Field     | Operator   | Value                                        |
 | --------- | ---------- | -------------------------------------------- |
 | Rule name |            | Geo-Challenge Unintended Traffic             |
-| Country   | is not in  | Your target countries (for example, `India`, `US`) |
+| Country   | is not in  | Your target countries (for example, `India`, `US` ) |
 | Action    |            | Managed Challenge                            |
 | Status    |            | Active                                       |
 
